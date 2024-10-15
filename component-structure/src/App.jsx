@@ -6,6 +6,7 @@ import Login from './Login'
 
 // Login komponentinde const olarak export edilen alan burada import edildi.
 import { users } from './Login'
+import Hello from './Hello'
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
     //Fragment "<></>"
     <>
       <Login />
+      <Hello />
     </>
   )
 }

@@ -1,0 +1,10 @@
+C:\Users\xsaozdemir\VsCodePrject>npm create vite@latest
+- enter project name
+- select React
+- select JavaScript
+
+cd project name
+npm install
+npm run dev
+
+stop: ctrl + c
