@@ -8,3 +8,7 @@ npm install
 npm run dev
 
 stop: ctrl + c
+
+
+-------------------SHORTCUT----------------
+https://docs.emmet.io/cheat-sheet/
