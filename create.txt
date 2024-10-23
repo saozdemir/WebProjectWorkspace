@@ -12,3 +12,10 @@ stop: ctrl + c
 
 -------------------SHORTCUT----------------
 https://docs.emmet.io/cheat-sheet/
+
+1- ALT +  SHIFT + F  :Format Code
+2- CTRL + ALT + Ok Tuşu : İmleci yukarı veya aşağı büyütüyor.
+3- ALT + Ok Tuşu :Satırı kaydırma
+4- Yazı Seç + CTRL + D : Aynı olanı bulup değişiklik yapman istenirse
+5- CTRL + SHIFT + K : Satırı sil
+6- CTRL + ENTER : Yeni satır

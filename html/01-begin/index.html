@@ -14,11 +14,125 @@
   <body>
     <!--İçerik-->
     <ul>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
+      <li class="item">Ahmet</li>
+      <li class="item">Emir</li>
+      <li class="item">Esra</li>
     </ul>
+    <!--Header (1-6)-->
+    <h1>Header1</h1>
+    <h2>Header2</h2>
+    <h3>Header3</h3>
+    <h4>Header4</h4>
+    <h5>Header5</h5>
+    <h6>Header6</h6>
+
+    <p>Paragraf</p>
+    <!--Lorem otomatik metin-->
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab eaque possimus
+      hic, blanditiis quibusdam sed impedit temporibus. Quis architecto quas eos
+      sequi corrupti eum commodi quidem officia odit, accusamus praesentium?
+    </p>
+    <!--Biçimlendirme Etiketleri
+    hr      : Çizgi
+    br      : Satır boşluk bırakmak
+    strong  : Kalın
+    b       : Kalın
+    i       : İtalik
+    mark    : Fosforlu kalem
+    -->
+    <hr />
+    <p>Java</p>
+    <p><strong>React</strong></p>
+    <br />
+    <p><mark style="background-color: red">JavaScript</mark></p>
+    <p>Html</p>
+    <p style="font-weight: bold">CSS</p>
+
+    <!--IMAGE
+    img(image) : resim
+    src: resim yolu
+    alt: resim açılamasa gösterilecek mesaj
+    width="50" : genişlik
+    height="30" : yükseklik
+    <center></center> : Ortalanmaış
+    -->
+    <center>
+      <img
+        src="TR_flag.png"
+        alt="Resim yüklenemedi"
+        width="50"
+        height="30"
+      /><!--farkı klasörde ise: "/images/TR_flag.png"-->
+    </center>
+
+    <!--LINK ve Yönlendirme
+    href: link
+    target: yönlendirme biçimi yeni (sekme vs)
+    -->
+    <a href="https://www.google.com/" target="_blank">Google</a>
+    <br />
+    <a href="https://www.google.com/" target="_blank">
+      <img src="TR_flag.png" alt="Resim yüklenemedi" width="50" height="30" />
+    </a>
+
+    <!--LIST Sıralı-Sırasız
+    <ol> : Ordinary list (Sıra numaralı)
+          type: sayı ya da rakam belirtme
+    <ul> : Unordinary list (Sıra numarasız)
+    <li> : list item
+    -->
+    <h3>Sebzeler</h3>
+    <ul>
+      <li>Pırasa</li>
+      <li>Karnıbahar</li>
+      <li>Havuç</li>
+    </ul>
+
+    <h3>Meyveler</h3>
+    <ol type="A">
+      <li>Muz</li>
+      <li>Mandalin</li>
+      <li>Armut</li>
+    </ol>
+
+    <!--TABLE
+    table: yablo etiketi
+      border: çerçeve kalınlığı
+    tr: table row (satır)
+    td: table data (veri-hücre değeri)
+    th: table header (tablo başlığı)
+    rowspan: satır birleştirme
+    colspan: sütun birleştirme
+    -->
+    <table border="1">
+      <tr>
+        <th colspan="4">Kişisel Bilgiler</th>
+      </tr>
+      <tr>
+        <th rowspan="2">Personel</th>
+        <th>Ad</th>
+        <th>Soyad</th>
+        <th>Yaş</th>
+      </tr>
+      <tr>
+        <td>Ahmet</td>
+        <td>Özdemir</td>
+        <td>33</td>
+      </tr>
+    </table>
+
+    <!--INLINE ve BLOCK elementler
+    <p> , <h> : satır kaplayan elementlerdir (BLOCK)
+    <span> : INLINE element yazının yanına yazı yazılır
+    -->
+    <p>İletişim</p>
+    <p>İletişim2</p>
+    <span>Span</span>
+    <span>Span2</span>
+
+    <!--DIV etiketi-->
+
+
   </body>
 </html>
