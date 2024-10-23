@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selectors</title>
+    <style>
+      /*Tüm alanları seçer.*/
+      /* *{ 
+            color: blue;
+        } */
+
+      /*Sadece paragraf(p) alanlarını seçer.*/
+      /* p{
+            color: red;
+         } */
+
+      /* Sadece belirtilen etiketleri düzenler. Ör: p ve h3*/
+      /* p,h3{
+            color: brown;
+         } */
+
+      /* Div içindeki bütün p alanlarını seç.*/
+      /* div p{
+            color: cadetblue;
+         } */
+
+      /* Parent'i div olan bütün p alanlarını al*/
+      /* div>p {
+            color:bisque;
+         } */
+
+      /*Div elementinden hemen sonraki p elementini alır.*/
+      /* div+p{
+            color: yellow;
+         } */
+
+      /*Div'den sonraki bütün p alanlarını al*/
+      /* div~p{
+            color: yellowgreen;
+          } */
+
+      /* Div den sonraki p lerden ilk çocuğu seç*/
+      /* div > p:first-child {
+        color: red;
+      } */
+
+      /* Div den sonraki p lerden ilk çocuğu seç*/
+      /* div > p:las-child {
+        color: green;
+      } */
+    
+      /* Annesi div olan 3. cocuğu seç*/
+      /* div>p:nth-child(3){
+        color: darkblue;
+      } */
+    
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>paragraf1</p>
+      <p>paragraf2</p>
+      <p>paragraf3</p>
+      <p>paragraf4</p>
+      <p>paragraf5</p>
+
+      <nav>
+        <p>paragraf6</p>
+        <a href="">Link1</a>
+        <a href="">Link2</a>
+        <a href="">Link3</a>
+      </nav>
+      <a href="">Link4</a>
+      <a href="">Link5</a>
+    </div>
+    <div class="div2">
+      <p>paragraf7</p>
+      <p>paragraf8</p>
+      <p>paragraf9</p>
+    </div>
+    <p>paragraf10</p>
+
+    <div>
+      <div>
+        <h3>h3 etiket 1</h3>
+      </div>
+      <h3>h3 etiket 2</h3>
+      <h3>h3 etiket 3</h3>
+      <h3>h3 etiket 4</h3>
+    </div>
+  </body>
+</html>

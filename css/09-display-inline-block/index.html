@@ -4,16 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Display-Inline-Block</title>
+    <style>
+      .box1{
+        width: 300px;
+        height: 300px;
+        background-color: red;
+        display: inline-block;/* Boyutu kadar olan alanı kaplasın*/
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+      .box2{
+        width: 300px;
+        height: 300px;
+        background-color: grey;
+        display: inline-block;/* Boyutu kadar olan alanı kaplasın*/
+      }
+    </style>
   </head>
   <body>
     <!--
-    1- inline
-    2- block
-    3- inline-block
+    1- inline: genişlik ve yükseklik verilemez
+    2- block: genişlik ve yükseklik verilir( Tüm satırı kaplar)
+    3- inline-block: genişlik ve yükseklik değeri kadar block, sonrası için inline
     -->
-    <p style="display: inline">Paragraf1</p>
-    <!--Block:  tüm satırı kaplıyor. CSS display yeteneği ile inline yapıldı.-->
-    <a style="display: block" href="#">Link1</a
-    ><!--Inline: sadece içeriği kadar yer kaplıyor.CSS display yeteneği ile block yapıldı.-->
+    <p style="display: inline; width: 250px; height: 250px;">Paragraf1</p>
+    <!-- Block:  tüm satırı kaplıyor. CSS display yeteneği ile inline yapıldı.-->
+    <!-- Inline etiketlere genişlik ve yükseklik tanımlanamaz!!! -->
+    <a style="display: block" href="#">Link1</a>
+    <!-- Inline: sadece içeriği kadar yer kaplıyor.CSS display yeteneği ile block yapıldı.-->
+
+    <div class="box1"></div>
+    <div class="box2"></div>
   </body>
 </html>
