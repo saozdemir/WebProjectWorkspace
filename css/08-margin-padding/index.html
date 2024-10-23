@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Margin-Padding</title>
+    <style>
+      .box {
+        background-color: lightblue;
+        width: 400px;
+        height: 250px;
+        margin-top: 40px; /*En üstteki boşluk*/
+        margin-left: 40px;
+        margin-bottom: 50px;
+      }
+
+      .box2 {
+        background-color: lightgrey;
+        width: 250px;
+        height: 250px;
+      }
+
+      .h3 {
+        padding-left: 15px;
+        padding-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+    Margin -> Border -> Padding -> Content
+    Margin: dışdaki component ile aradaki boşluk.
+    Padding: içerideki componentler ile arasında kalan boşluk
+    -->
+
+    <h4>Web Contents</h4>
+    <div class="box"></div>
+    <p style="margin-top: 40px">CSS</p>
+    <p style="margin-top: 40px; margin-left: 20px">HTML</p>
+
+    <div class="box2">
+      <h3 class="h3">Web Site</h3>
+      <p>Welcome</p>
+      <p style="padding-top: 100px; padding-left: 5px; text-align: center">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      </p>
+    </div>
+  </body>
+</html>
