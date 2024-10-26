@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Layout - Grid</title>
+    <title>Text - Background</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
@@ -13,20 +13,20 @@
   </head>
   <body>
     <!-- 
-    !!! Toplamda 12 sütun paylaştırılacak şekilde bölme işlemi yapışır
+    * Text        : https://getbootstrap.com/docs/4.6/utilities/text/
+    * Text Color  : https://getbootstrap.com/docs/4.6/utilities/text/#reset-color
+    * Background  : https://getbootstrap.com/docs/4.6/utilities/colors/#background-color
 
-    container-fluid = satırın tamamını kaplar
-
-    ? col-sm-3 col-md-4 col-lg-6 : küçükken 3 grid, orta seviyede 4 grid, büyük için 6 grid kullan diye sıra sıra ekleme yapıabilir.
     -->
     <div class="container">
-      <div class="row bg-warning align-items-start" style="height: 150px">
-        <div class="col-lg bg-primary text-light align-self-start">
-          One of three columns
-        </div>
-        <div class="col-lg bg-danger text-light">One of three columns</div>
-        <div class="col-lg bg-success text-light">One of three columns</div>
+      <div
+        class="alert alert-warning mt-5 text-center text-uppercase font-weight-bold font-italic"
+      >
+        Waring!
+        <a href="#" class="text-decoration-none">Anasayfa</a>
       </div>
+
+      <p class="text-warning">Ahmet Özdemir</p>
     </div>
 
     <script

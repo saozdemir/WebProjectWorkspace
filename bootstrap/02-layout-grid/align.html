@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Align</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!--
+    ! Düşeyde Hizalama 
+        ? ROW
+        ? Satırı hizalamak için
+    * row align-item-start  : Elemanları sayfa başına hizala
+    * row align-item-center : Elemanları sayfa ortasına hizala
+    * row align-item-end    : Elemanları sayfa sonuna hizala
+
+        ? COL
+        ? Sütunu hizalamak için
+    * align-self-start  : Sütun başına
+    * align-self-center : Sütun ortasına
+    * align-self-end    : Sütun sonuna
+
+    ! Yatayda Hizalama
+
+    * justify-content-start     : satırın başına
+    * justify-content-center    : satırın ortasına
+    * justify-content-end       : satır sonuna
+    * justify-content-around    : eşit parçalara ayır
+    * justify-content-between   : sağdan ve soldan yasla
+    -->
+
+    <!-- ! align-items -->
+    <div class="container">
+      <div
+        class="row bg-warning align-items-start text-center"
+        style="height: 150px"
+      >
+        <div class="col-lg bg-primary text-light">One of three columns</div>
+        <div class="col-lg bg-danger text-light">One of three columns</div>
+        <div class="col-lg bg-success text-light">One of three columns</div>
+      </div>
+    </div>
+    <!--! align-self-->
+    <div class="container">
+      <div class="row bg-warning" style="height: 150px">
+        <div class="col-lg bg-primary text-light align-self-start">
+          One of three columns
+        </div>
+        <div class="col-lg bg-danger text-light align-self-center">
+          One of three columns
+        </div>
+        <div class="col-lg bg-success text-light align-self-end">
+          One of three columns
+        </div>
+      </div>
+    </div>
+    <!--! justify-content-->
+    <div class="container-fluid">
+        <div class="row bg-secondary text-center justify-content-center align-items-center" style="height: 150px">
+          <div class="col-2 bg-primary text-light" style="height: 50px">
+            One of three columns
+          </div>
+          <div class="col-2 bg-danger text-light" style="height: 50px">
+            One of three columns
+          </div>
+          <div class="col-2 bg-success text-light" style="height: 50px">
+            One of three columns
+          </div>
+        </div>
+      </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+      integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

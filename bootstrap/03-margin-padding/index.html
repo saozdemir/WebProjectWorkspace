@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Layout - Grid</title>
+    <title>Margin Padding</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
@@ -12,22 +12,21 @@
     />
   </head>
   <body>
-    <!-- 
-    !!! Toplamda 12 sütun paylaştırılacak şekilde bölme işlemi yapışır
-
-    container-fluid = satırın tamamını kaplar
-
-    ? col-sm-3 col-md-4 col-lg-6 : küçükken 3 grid, orta seviyede 4 grid, büyük için 6 grid kullan diye sıra sıra ekleme yapıabilir.
+    <!-- https://getbootstrap.com/docs/4.6/layout/utilities-for-layout/#margin-and-padding  
+    p: padding-> bileşen içinden boşluk
+    m: margin -> bileşen dışından boşluk
+    1 rem = 16 px;
+    
     -->
+    <!--  -->
     <div class="container">
-      <div class="row bg-warning align-items-start" style="height: 150px">
-        <div class="col-lg bg-primary text-light align-self-start">
-          One of three columns
-        </div>
-        <div class="col-lg bg-danger text-light">One of three columns</div>
-        <div class="col-lg bg-success text-light">One of three columns</div>
-      </div>
+      <div class="card bg-primary p-2">Div 1</div> <!-- 4 taraftan 2rem (32px) boşluk  -->
+      <div class="card bg-secondary pt-2">Div 2</div>
+      <div class="card bg-success mr-5 ml-3">Div 3</div> <!-- Eleman dışından sağdan 5rem boşluk bırak -->
+      <div class="card bg-info mx-2">Div 4</div><!-- x ekseni boyunca dışarıdan 2 remlik boşluk bırak  -->
+      <div class="card bg-warning my-2 px-3">Div 5</div>
     </div>
+
 
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
