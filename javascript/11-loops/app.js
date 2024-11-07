@@ -21,3 +21,24 @@ do {
     console.log("Do while loop " + condition)
     condition++;
 } while (condition < 10);
+
+//* For Each
+//* Nesne oluşturma ve nesne dizileri
+let personnel1 = {
+    name: "Ahmet",
+    surname: "Özdemir",
+    age: 33
+};
+let personnel2 = {
+    name: "Emir",
+    surname: "Özdemir",
+    age: 1
+};
+
+let personnelList = [personnel1, personnel2];
+console.log(personnelList);
+
+//? FOREACH
+personnelList.forEach(function (personnel) {
+    console.log(personnel);
+});
