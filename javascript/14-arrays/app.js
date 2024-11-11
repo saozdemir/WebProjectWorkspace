@@ -63,3 +63,7 @@ console.log(cars);
 //Dizinin 2. indexindeki eemandan sonra 1 eleman sil
 cars.splice(2, 1);
 console.log(cars);
+
+let namesStr = "Ahmet,Emir,Esra";
+let ourNames = namesStr.split(",");
+console.log(ourNames);
