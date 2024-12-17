@@ -29,7 +29,7 @@ if(result){
 
     const consumer = new Consumer(firstName, lastName, result, products);
     totalPrice = consumer.calculatePrice();
-    alert(`Müşteri Bilgileri : ${firstName} ${lastName}
+    alert(`Müşteri Bilgileri : ${consumer.firstName} ${consumer.lastName}
         Ödenecek Tutar: ${totalPrice}`)
 } else{
     const consumer = new Consumer(null, null, result, products);
