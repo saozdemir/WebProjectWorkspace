@@ -6,16 +6,19 @@
  * * 1- Timing işlemlerinde
  * * 2- Event(Olay) lar
  * * 3- Http isteklerinde //!(En sık kullanılan)
+ * *    -> XmlHttpRequest
+ * *    -> Fetch Api
+ * *    -> Axios (React İçin)
  * 
  * 
  * 
  * ? Asenkron Yapıları Senkrona Çevirip Yönetmeye Yarayan Teknolojiler
- * * Callback
- * * Promise
- * * Async Await 
+ * * Callback (ES6 ve öncesi) //? callback hell
+ * * Promise (ES6 2015) //? prmomise chain
+ * * Async Await (ES7 ile geldi)
  */
 
-//* Senkron 
+//* Senkron : sıra ile çalışan iş parçacıkları 
 hello("Seyit");
 console.log(1);
 console.log(2);
@@ -27,7 +30,7 @@ hello("Ahmet");
 
 
 
-//* Asenkron
+//* Asenkron: 
 setTimeout(()=>{
     console.log("1000 ms Timeout çalıştı");
 }, 1000);

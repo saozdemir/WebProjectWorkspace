@@ -34,10 +34,12 @@ const users = [
 ];
 
 //? Http isteği atmış gibi simule edildi.
-function getUserId(){
+function getUserId(callback){
     setTimeout(()=>{
         //? Servise gidildi ve 1 sn gecikme ile cevap alındı.
-        return 5;
+        let userId = 5;
+        callback(userId);
+        return userId;
     }, 1000);
 }
 
@@ -55,3 +57,7 @@ function getPostByUserId(userId){
 //! Aşağıdaki iki ifade de Asenkron olarak çalıştığı için hiç bir sonuç alamadık.
 let userId = getUserId();// Async
 getPostByUserId(userId);// Async
+
+
+//? Senkron yapıldı (callback)
+getUserId(getPostByUserId);

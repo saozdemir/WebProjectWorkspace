@@ -21,3 +21,7 @@ https://docs.emmet.io/cheat-sheet/
 6- CTRL + ENTER : Yeni satır
 
 CTRL + Ö: yorum satırı
+
+-------------------UTIL-------------------
+ Fake Rest API
+    https://jsonplaceholder.typicode.com/
