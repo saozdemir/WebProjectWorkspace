@@ -24,4 +24,5 @@ CTRL + Ö: yorum satırı
 
 -------------------UTIL-------------------
  Fake Rest API
-    https://jsonplaceholder.typicode.com/
+    JSON PLaceHolder => https://jsonplaceholder.typicode.com/
+    Unsplash => https://unsplash.com/developers
