@@ -26,3 +26,9 @@ CTRL + Ö: yorum satırı
  Fake Rest API
     JSON PLaceHolder => https://jsonplaceholder.typicode.com/
     Unsplash => https://unsplash.com/developers
+    Exchange Api => https://freecurrencyapi.com/
+    Postman Api => https://www.postman.com/
+
+Icon
+   Font-Awesome steelsheet => https://cdnjs.com/libraries/font-awesome
+   Font-Awesome icon => https://fontawesome.com/search
