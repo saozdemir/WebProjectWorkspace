@@ -1,0 +1,64 @@
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 20px 0px;
+}
+
+#form {
+    /* width: 75%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#searchInput{
+    width: 75%;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.button-wrapper {
+    margin: 10px 0px;
+}
+
+#btnSearch {
+    width: 110px;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #464646;
+    color: #ffff;
+    box-shadow: 1px 3px 5px lightgrey;
+    border: none;
+}
+
+#btnClear {
+    width: 110px;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #cc3838;
+    color: #ffff;
+    box-shadow: 1px 3px 5px lightgrey;
+    border: none;
+}
+
+.imagelist-wrapper {
+    display: flex; /*? block ile tüm satırı kaplamasını istemiyoruz. */
+    flex-direction: row; /*? defaoult olarak colum seçili gelir. Yan yana gelmesi için*/
+    flex-wrap: wrap; /*? Ekrana sığmıyorsa alt satıra geç*/
+    justify-content: center;
+    /*
+    ! 1- flex-direction: row ise hizalamak için justify-content: center kullanılır.
+    ! 2- flex-direction: column ise hizalamak için align-items: center kullanılır 
+    */
+}
+
+/* Farklı bir kullanım yöntemi*/
+.imagelist-wrapper > .card {
+    margin: 20px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding: 15px;
+    box-shadow: 3px 5px 8px gray;
+}
