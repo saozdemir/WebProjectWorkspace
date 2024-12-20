@@ -19,6 +19,7 @@ https://docs.emmet.io/cheat-sheet/
 4- Yazı Seç + CTRL + D : Aynı olanı bulup değişiklik yapman istenirse
 5- CTRL + SHIFT + K : Satırı sil
 6- CTRL + ENTER : Yeni satır
+7- ALT + SHIF + Aşağı Ok : Satırı aşağı kopyala 
 
 CTRL + Ö: yorum satırı
 
