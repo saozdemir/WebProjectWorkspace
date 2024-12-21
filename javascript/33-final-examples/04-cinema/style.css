@@ -30,8 +30,9 @@ body {
     color: lightgrey;
 }
 
-.seat:hover {
+.seat:not(.full):hover {
     transform: scale(1.2);
+    /** full class'ına sahip olanlar büyümesin.*/
 }
 
 .movieMain {
@@ -135,4 +136,17 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(83, 83, 83);
 
+}
+
+/** Koltuk Renkleri*/
+.empty {
+    color: lightgrey;
+}
+
+.selected {
+    color: rgb(255, 230, 0);
+}
+
+.full {
+    color: rgb(0, 204, 255);
 }
