@@ -36,3 +36,11 @@ Icon
 
 Github Api
    https://api.github.com/users
+
+
+----------JavaScript Cheat Sheet----------
+   https://ilovecoding.org/blog/js-cheatsheet
+
+
+-------------CSS Cheat Sheet-------------
+   https://www.codewithharry.com/blogpost/css-cheatsheet/
