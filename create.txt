@@ -24,6 +24,9 @@ https://docs.emmet.io/cheat-sheet/
 CTRL + Ö: yorum satırı
 
 -------------------UTIL-------------------
+JSON Viewer Chrome Eklentisi:
+    JSON Viewer
+
  Fake Rest API
     JSON PLaceHolder => https://jsonplaceholder.typicode.com/
     Unsplash => https://unsplash.com/developers
@@ -37,6 +40,8 @@ Icon
 Github Api
    https://api.github.com/users
 
+Weather Api
+    https://openweathermap.org/api
 
 ----------JavaScript Cheat Sheet----------
    https://ilovecoding.org/blog/js-cheatsheet

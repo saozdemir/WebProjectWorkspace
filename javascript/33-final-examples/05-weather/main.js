@@ -18,6 +18,7 @@ async function findWeather(e) {
             .then(data => {
                 if (data.cod === "404") {//message: city not found
                     alert("Şehir bulunamadı.")
+                    searchInput.value = "";
                 } else {
                     display(data);
                 }

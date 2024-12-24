@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #363d6b;
+    font-family: Poppins;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    /* row için*/
+    align-items: flex-end;
+    /* colun için*/
+}
+
+#searchInput {
+    padding: 5px;
+    border-radius: 50px;
+    background-color: transparent;
+    outline: none;
+    margin-top: 15px;
+    margin-right: 25px;
+    color: white;
+}
+
+#searchInput::placeholder {
+    /*! search input içindeki attribute 'a erişmek içn kullanıldı.*/
+    color: lightgray;
+    font-size: 12px;
+    text-align: center;
+}
+
+.movies {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* satır dolunca alt satıra geç*/
+    margin-top: 20px;
+    justify-content: center;
+    /* Yatayda ortala*/
+    align-items: center;
+    /* dikeyde ortala*/
+}
+
+.movie {
+    margin: 10px;
+    width: 260px;
+    height: 405px;
+    background-color: #4a548d;
+}
+
+.movie-picture {
+    width: 260px;
+    height: 320px;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    /*Yan yana*/
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.movie-name {
+    font-size: 13px;
+    color: lightgray;
+    margin-right: 10px;
+}
+
+.imdb-point {
+    font-size: 15px;
+    color: black;
+    background-color: #efd70d;
+    padding: 3px;
+}
+
+.green {
+    background-color: green;
+    color: white;
+}
+
+.yellow {
+    background-color: #efd70d;
+    color: black;
+}
+
+.red {
+    background-color: red;
+    color: white;
+}
