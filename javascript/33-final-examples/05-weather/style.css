@@ -1,13 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
 * { /*! Bu tanımlama tüm uygulama için geçerli demek.*/
     margin: 0;
     padding: 0;
 }
+
 body {
     font-family: Poppins, sans-serif;
     background-image: url("weather.jpg");
-    background-repeat: no-repeat;/* Resim boş alanları doldurmak için kendini tekrar etmesin*/
-    background-position: center;/* Resim ortada olsun*/
+    background-repeat: no-repeat; /* Resim boş alanları doldurmak için kendini tekrar etmesin*/
+    background-position: center; /* Resim ortada olsun*/
     background-size: cover; /* Tüm alanları doldur*/
     height: 100vh; /* Tarayıcının tamamını kapla*/
 }
@@ -30,7 +32,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    box-shadow: 5px 12px 20px black;/* Gölgelendirme*/
+    box-shadow: 5px 12px 20px black; /* Gölgelendirme*/
 }
 
 .header {
@@ -73,4 +75,8 @@ body {
 .degree {
     font-size: 65px;
     margin-bottom: 10px;
+}
+
+.description {
+    text-transform: capitalize;
 }
