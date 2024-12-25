@@ -49,3 +49,11 @@ Weather Api
 
 -------------CSS Cheat Sheet-------------
    https://www.codewithharry.com/blogpost/css-cheatsheet/
+
+-----------Gerçek Hayatta Kullanımı-----------
+Backend:
+    Spring + Java + REST Api
+Security:
+    SECURITY + JWT
+Frontend:
+    HTML+CSS+JavaScript+React
