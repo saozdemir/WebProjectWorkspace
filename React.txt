@@ -1,0 +1,26 @@
+---------React'ın 3 ana bileşeni---------
+1- Component : bir yapın tanımlanır tekrar tekrar kullanılır.
+2- Props : componentler arası veri taşıma işlemi.
+3- State Management : Verileri tutup saklama (Context Api , Redux toolkit)
+
+ReactJS (JSX) => JS + HTML
+
+
+
+---------Proje Çalıştırma---------
+old=> npx create-react-app uygulama_adı
+
+Vite ile oluşturma
+https://vite.dev/guide/
+
+C:\Users\xsaozdemir\VsCodePrject\>npm create vite@latest
+- enter project name
+- select React
+- select JavaScript
+
+cd project name
+npm install
+npm run dev
+
+stop: ctrl + c
+
