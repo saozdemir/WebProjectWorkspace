@@ -25,7 +25,7 @@ C:\Users\xsaozdemir\VsCodePrject\>npm create vite@latest
 - select React
 - select JavaScript
 
-        Vite sürümü seçmek için npm create vite@5
+        Vite sürümü seçmek için=> npm create vite@5.4
 
 cd project name
 npm install
@@ -33,6 +33,15 @@ npm run dev
 
 stop: ctrl + c
 
+------------------------Eklentiler------------------------
+Modern React Snippets
+    rfce: react functional component
+
+
+ES Lint Kapatma .eslintrc.cjs dosyasına aşağıdaki satır eklenir
+    "rules": {
+        "no-unused-vars": "off"
+    }
 
 --------------Otak Sistem Bileşenleri--------------
 nodejs  : 16.14.0
@@ -51,9 +60,43 @@ src             : Kaynak dosyaları
     index.html      : id si root olan bir div oluşturur.
     main.jsx        : id si root olan elementi seçer ve o div içinde App componentini render eder.
     App.jsx         : main.jsx'de render edilmesi istenen componentin içeriğidir.
-
----Component Kavramı---
+-----------------------
+---COMPONENT KAVRAMI---
+-----------------------
     Component: JS de kullanılan fonksiyondur. 2 farklı kullanımı vardır.
                 1- Functional component : Halen kullanılıyor.
                 2- Class component : Eskide kaldığı için tercih edilmiyor.
         return: JS kodlarından sonra bir html kodu döndürüyor.
+
+    EXPORT yöntemleri
+    export          : Bir componentin sadece bir parçasını dışarıya göndermek istediğimizde kullanılır.
+
+    export default  : bir componenti olduğu gibi dışarıya göndermek istediğinizde kullanılır.
+-------------------
+---PROPS KAVRAMI---
+-------------------
+    Bir veriyi alıp child componente aktarması için kullanılır.
+
+-------------------
+---STATE KAVRAMI---
+-------------------
+    Verileri tutmak için kullanılan hooks dur. Örnek olarak java'da
+    String TCNO = "12345678901";
+    Bu ifadenin reactdaki karşılığıdır.
+
+    Bir state'in değeri set metodu ile değiştirilirse component yeniden render edilir.
+
+-------------------
+---EFFECT KAVRAMI---
+-------------------
+    3 farklı tipte kullanımı vardır.
+        1- Her render işleminde çalış.
+        2- Sadece sayfa ilk defa render edilirken çalış.
+        3- Bir veya birden fazla state e bağımlı ve sayfa ilk defa render edildiğinde çalış.
+
+ ÖNEMLİ NOTLAR
+ 1- return içinde bir css kodu yazılacaksa iki adet {} içine yazılır.
+    Ör. <div style={{backgroundColor: "orange"}}</div>
+ 2- return içinde 1 parent component olur. 2 adet yazılamaz.
+ 3- Fragmet: <></>
+ 4- Bir state'in değeri set metodu ile değiştirilirse component yeniden render edilir.

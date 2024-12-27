@@ -27,6 +27,9 @@ CTRL + Ö: yorum satırı
 JSON Viewer Chrome Eklentisi:
     JSON Viewer
 
+React Developer Tools Eklentisi:
+    React Developer Tools
+
  Fake Rest API
     JSON PLaceHolder => https://jsonplaceholder.typicode.com/
     Unsplash => https://unsplash.com/developers
