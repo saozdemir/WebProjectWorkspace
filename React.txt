@@ -20,7 +20,7 @@ npm install --save-dev web-vitals
 Vite ile oluşturma
 https://vite.dev/guide/
 
-C:\Users\xsaozdemir\VsCodePrject\>npm create vite@latest
+C:\Users\xsaozdemir\WebProjectWorkspace\>npm create vite@latest
 - enter project name
 - select React
 - select JavaScript

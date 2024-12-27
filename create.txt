@@ -1,4 +1,4 @@
-C:\Users\xsaozdemir\VsCodePrject>npm create vite@latest
+C:\Users\xsaozdemir\WebProjectWorkspace>npm create vite@latest
 - enter project name
 - select React
 - select JavaScript
