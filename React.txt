@@ -7,9 +7,16 @@ ReactJS (JSX) => JS + HTML
 
 
 
----------Proje Çalıştırma---------
-old=> npx create-react-app uygulama_adı
+--------------Proje Çalıştırma--------------
+-----ESKİ YÖNTEM-----
+npx create-react-app uygulama_adı
+cd uygulama_adı
+npm start
 
+Hata Çıkarsa
+npm install --save-dev web-vitals
+
+-----YENİ YÖNTEM-----
 Vite ile oluşturma
 https://vite.dev/guide/
 
@@ -18,9 +25,35 @@ C:\Users\xsaozdemir\VsCodePrject\>npm create vite@latest
 - select React
 - select JavaScript
 
+        Vite sürümü seçmek için npm create vite@5
+
 cd project name
 npm install
 npm run dev
 
 stop: ctrl + c
 
+
+--------------Otak Sistem Bileşenleri--------------
+nodejs  : 16.14.0
+npm     : 8.3.1
+vite    : 5.4.11 (5.4.8)
+
+
+---React Proje Mimarisi---
+node_modules    : paket ve proje için gerekenler (npm install ile indi)
+public          :
+src             : Kaynak dosyaları
+    App.css         : App.jsx içinde çağrıldı.
+    eslint.config.js: Kod standartlarını kontrol ediyor.
+    package.json    : çalıştırma için gereken kütüphaneler ve scriptler
+                    (Örnek= proje dizininde iken -> npm install react-icons)
+    index.html      : id si root olan bir div oluşturur.
+    main.jsx        : id si root olan elementi seçer ve o div içinde App componentini render eder.
+    App.jsx         : main.jsx'de render edilmesi istenen componentin içeriğidir.
+
+---Component Kavramı---
+    Component: JS de kullanılan fonksiyondur. 2 farklı kullanımı vardır.
+                1- Functional component : Halen kullanılıyor.
+                2- Class component : Eskide kaldığı için tercih edilmiyor.
+        return: JS kodlarından sonra bir html kodu döndürüyor.
