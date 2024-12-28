@@ -14,13 +14,13 @@ function App() {
     //! Her zaman çalışır.
     useEffect(() => {
         /** 1. parametre bir callback fonksiyon, */
-        console.log("Her zaman çalışır.")
+        console.log("Her zaman çalışır.");
 
     });
 
     //! Component ilk render edildiğinde çalışır.
     useEffect(() => {
-        console.log("Component ilk render edildiğinde çalışır.")
+        console.log("Component ilk render edildiğinde çalışır.");
         //? vt den ürünleri getir ve listele (1 defa).
     }, []);
 

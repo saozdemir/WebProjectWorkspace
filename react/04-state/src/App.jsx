@@ -15,10 +15,10 @@ function App() {
         useState({userName: "Ahmet", password: "123456"});
     const [showPassword, setShowPassword] = useState(true);
 
-    const [count, setCount] = useState(0)
+    const [count, setCount] = useState(0);
 
     function setSurname() {
-        setLastname("ÖZDEMİR")
+        setLastname("ÖZDEMİR");
     }
 
     const counter = () => {
