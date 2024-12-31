@@ -100,3 +100,26 @@ src             : Kaynak dosyaları
  2- return içinde 1 parent component olur. 2 adet yazılamaz.
  3- Fragmet: <></>
  4- Bir state'in değeri set metodu ile değiştirilirse component yeniden render edilir.
+
+ -------------------
+ --------API--------
+ -------------------
+ Birden fazla arayüze hizmet verme için yazılmış backend katmanı
+    1- SOAP: xml tabanlı, yavaş ve konfigürasyonu zor. Eskiden çok tercih edilen yöntem.
+    2- REST: JSON tabanlı, hızlı, popüler ve daha fazla kaynağa sahip
+
+React ile bir API ye istek atma yöntemleri
+        Makale Linki=> https://builtin.com/software-engineering-perspectives/react-api
+    1- XNLHttpRequest (Çok eski yöntem)
+    2- Fetch API (Promiseler ile çaışan api)
+    3- Axios (* En çok tercih edilen güncel yönem)
+            npm install axios
+
+Fake API için yetenekler ve kurulumlar
+     1- Fake Rest API
+        JSON PLaceHolder => https://jsonplaceholder.typicode.com/
+     2- JSON Server
+            Kurulum     : npm install json-server (npm install json-server@0.17.4)
+            Kontrol     : json-server --version
+            DB Oluşturma: src dizini altına db.json adında dosya oluşturulur.
+            Çalıştırma  : json-server --watch .\src\db.json --port 4000
