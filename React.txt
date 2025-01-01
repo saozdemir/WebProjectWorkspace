@@ -119,7 +119,13 @@ Fake API için yetenekler ve kurulumlar
      1- Fake Rest API
         JSON PLaceHolder => https://jsonplaceholder.typicode.com/
      2- JSON Server
-            Kurulum     : npm install json-server (npm install json-server@0.17.4)
+            Kurulum     : npm install json-server (npm install -g json-server@0.16.3)
             Kontrol     : json-server --version
             DB Oluşturma: src dizini altına db.json adında dosya oluşturulur.
             Çalıştırma  : json-server --watch .\src\db.json --port 4000
+
+Axios API
+    GET: sorgulama
+    POST: yeni kayıt oluşturma
+    PUT: update içlemi için
+    DELETE: silme işlemi için
