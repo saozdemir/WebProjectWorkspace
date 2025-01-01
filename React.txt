@@ -129,3 +129,23 @@ Axios API
     POST: yeni kayıt oluşturma
     PUT: update içlemi için
     DELETE: silme işlemi için
+
+---------------------------------------------
+--------------------UTILS--------------------
+---------------------------------------------
+
+React Icons
+    npm install react-icons
+    https://react-icons.github.io/react-icons/
+
+
+---------------------------------------------
+--------------------SHORTCUT-----------------
+---------------------------------------------
+HTML içini doldurma:    ! (VSCode)
+
+Console Yazdırma:   clg (VSCode)
+                    log (Ws)
+
+React Fonksiyon Oluşturma:  rfce (VSCode)
+                            rsf (Ws)

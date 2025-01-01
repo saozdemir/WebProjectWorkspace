@@ -1,0 +1,9 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;/*Tarayıcıyı kaplasın*/
+    background-image: url(images/currency-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
