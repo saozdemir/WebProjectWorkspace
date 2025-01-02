@@ -2,10 +2,14 @@ import React from 'react';
 import Todo from "./Todo.jsx";
 import "../style/Todo.css";
 
-function TodoList() {
+function TodoList({todos, onRemoveTodo, onUpdateTodo}) {
     return (
         <div className={"todo-list-wrapper"}>
-            <Todo></Todo>
+            {
+                todos && todos.map((todo) => (
+                    <Todo key={todo.id} todo={todo} onRemoveTodo={onRemoveTodo} onUpdateTodo={onUpdateTodo}></Todo>
+                ))
+            }
         </div>
     );
 }

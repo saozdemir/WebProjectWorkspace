@@ -15,19 +15,23 @@
     border-bottom: 1px solid lightgrey;
 }
 
+.todo-input-update {
+    width: 380px;
+}
+
 .todo-create-button {
     margin-top: 10px;
     padding: 10px;
     border-radius: 5px;
     border: none;
-    background-color: darkorange;
+    background-color: #ffc400;
     color: white;
     font-weight: bold;
     cursor: pointer;
 }
 
 .todo-create-button:hover {
-    background-color: orange;
+    background-color: #fccd28;
 }
 
 .todo-list-wrapper {
@@ -42,10 +46,15 @@
     justify-content: space-between;
     border: 1px solid lightgrey;
     padding: 5px;
+    margin-top: 5px;
 }
 
 .todo-icons {
-    font-size:25px;
+    font-size: 25px;
     margin-right: 7px;
     cursor: pointer;
+}
+
+.todo-icons:hover {
+    color: #606060;
 }
