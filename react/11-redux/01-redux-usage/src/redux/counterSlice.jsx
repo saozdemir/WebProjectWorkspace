@@ -14,11 +14,14 @@ export const counterSlice = createSlice({
         },
         decrement: (state) => {
             state.value = state.value - 1;
+        },
+        setCounter: (state,action) => {
+            state.value = action.payload;
         }
     },
 
 })
 
 //! Fonksiyonlara dışarıdan erişmek için burada export edilmelidir.
-export const {increment, decrement} = counterSlice.actions
+export const {increment, decrement, setCounter} = counterSlice.actions
 export default counterSlice.reducer;
