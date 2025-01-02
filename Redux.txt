@@ -1,0 +1,85 @@
+-------------------
+-------REDUX-------
+-------------------
+- Redux olmadan componentlerde hiyerarşiye göre state geçişi olur.
+Yani en altta bulununan child componentten en üstteki parent componente state geçmek içi aradaki componentlere de state geçmek zorunda kalırız.
+Propslar ile sürekli bir veri taşıma durumu söz konusudur.
+
+    1- Redux        : Tüm componentleri saran ana bir katmandır. Belirli çağırma yöntemi ile doğrudan erişime açılmış olur. Nispeten eski bir yöntemdir.
+    2- Redux Toolkit: Redux'daki karmaşıklıkları engellemek için geliştirilmiştir. Redux yazma işlemini kolaylaştırır.
+
+    https://redux-toolkit.js.org/introduction/getting-started
+
+    Kurulum:
+                npm install @reduxjs/toolkit
+                npm install react-redux
+    Hata alınırsa:
+                npm install @reduxjs/toolkit --force
+                npm install react-redux --force
+
+    *- React Context Api: Redux Toolkit ile aynı amaçla geliştirilen React Context Api de karmaşık props gönderme işlemlerinin önüne geçmek için geliştirilmiştir.
+    https://legacy.reactjs.org/docs/context.html
+
+Kullanım adımları
+    1- Redux toolkit kütüphaneleri eklendi
+        npm install @reduxjs/toolkit
+        npm install react-redux
+    2- main.jsx içinde App componenti Provider componenti içine alındı.
+    3- Provider componentine props olarak store gönderildi.
+        <Provider store={store}>
+            <App/>
+        </Provider>,
+    4- store.jsx componenti oluşturuldu ve slice tanımlaması yapıldı
+        import userReducer from "../redux/userSlice.jsx";
+        export const store = configureStore({
+            reducer: {
+                user: userReducer
+            },
+
+        })
+    5- userSlice.jsx dosyası oluşturuldu ve state tanımlaması yapıldı.
+        //* state
+        const initialState = {
+            users: [], loading: false
+        }
+    6- userSlice metodu  createSlice ile oluşturuldu
+        import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
+        export const userSlice = createSlice({
+            name: "user",
+            initialState,
+            reducers: {
+                //! Http isteği olmazsa fonksiyonlar için burası kullanılacak.
+            },
+
+    7- store dan state çekmek için useSelector() kullanılır
+        //* Store dan users ları çekme işlemi
+        const {users} = useSelector(store => store.user);
+
+    8- store dan fonksiyon çağırmak için useDispatch() kullanılır.
+        const dispatch = useDispatch();
+
+    9- fonksiyonlar reducers içine tanımlanarak export edilerek kullanılır. Çağırmak için useDispatch() kullanılır.
+        reducers: {
+                //! Http isteği olmazsa fonksiyonlar için burası kullanılacak.
+                functionName
+            },
+
+        export const {functionName} = userSlice.actions;
+
+    10- Http istekleri için extraRecuders kullanılır. Bir builder parametresi alır.
+        * builder a addCase ile bir durum eklenir.
+        * birinci parametere olarak hangi fonksiyon çağrılmış ve sonucu ne isteniyor girilir.
+        * ikinci parametrede ise state ve http isteğinin sonucu verilir.
+        * çağırmak için yine useDispatch() kullanılır.
+            extraReducers: (builder) => {
+                //! Http isteklerinde kullanılır.
+                //* Http isteklerinde state güncelleme işlemi burada yapılıyor
+                //* getAllUsers fonk. çağrıldığında ve fullfilled olduğunda, response.data ile dönen değeri doldur.
+                builder.addCase(getAllUsers.fulfilled, (state, action) => {
+                    state.users = action.payload;
+                })
+            }
+
+    11- Http istekleri için yazılan fonksiyonlada createAsyncThunk() metodu ile oluşturulur
+        * birinci parametreye state verilir.
+        * ikinci parametre olarak asenkron http isteğinini yapıldığı fonksiyonu içerir.

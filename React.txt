@@ -86,9 +86,9 @@ src             : Kaynak dosyaları
 
     Bir state'in değeri set metodu ile değiştirilirse component yeniden render edilir.
 
--------------------
+--------------------
 ---EFFECT KAVRAMI---
--------------------
+--------------------
     3 farklı tipte kullanımı vardır.
         1- Her render işleminde çalış.
         2- Sadece sayfa ilk defa render edilirken çalış.
