@@ -83,3 +83,11 @@ Kullanım adımları
     11- Http istekleri için yazılan fonksiyonlada createAsyncThunk() metodu ile oluşturulur
         * birinci parametreye state verilir.
         * ikinci parametre olarak asenkron http isteğinini yapıldığı fonksiyonu içerir.
+
+
+--------------------
+--------UTIL--------
+--------------------
+
+    Redux DevTools Eklentisi
+        Redux DevTools

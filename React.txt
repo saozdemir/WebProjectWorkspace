@@ -101,6 +101,59 @@ src             : Kaynak dosyaları
  3- Fragmet: <></>
  4- Bir state'in değeri set metodu ile değiştirilirse component yeniden render edilir.
 
+
+------------------------
+----REACT ROUTER DOM----
+------------------------
+    URL değiştikçe hangi component render edilecek bunu belirlemeye yarayan yapıdır.
+
+    Kurulum:
+        npm install react-router-dom
+    Kullanım:
+        1- Routes altına Route componentleri eklenir. Kök url sonuna gelen path değerine göre o element render edilir.
+            import {Routes, Route} from "react-router-dom";
+        2- Rotute componentine path ve element adında 2 props gönderilir.
+            <Routes>
+                <Route path={"/"} element={<Home/>}></Route>
+                <Route path={"/about"} element={<About/>}></Route>
+                <Route path={"*"} element={<NotFoundPage/>}></Route> Eğer sayfa yoksa bunu çalıştır demek
+            </Routes>
+        3- main.jsx de App componenti BrowserRouter componenti ile sarılır.
+            <BrowserRouter>
+                 <App/>
+            </BrowserRouter>,
+
+        4- Navigasyon barında kullanmak için Link componenti import edilmelidir. Örnek olarak Header componenti içinde kullanıldı.
+            import {Link} from "react-router-dom";
+        5- Link elementinin to propsuna tıklandığında kök url e eklenecek path verilir.
+            <Link to={"/"}>Anasayfa</Link>
+            <Link to={"/about"}>Hakkında</Link>
+        6- İç içe Link yapısı kullanılacaksa child linke to propsu geçilirlen '/' olmadan yazılır(İç içe route kuralı gereği başa '/' konulmaz!!).
+            <Route path={"/about"} element={<About/>}>
+                <Route path={"employee"} element={<EmployeeAbout/>}></Route>{/* '/' karakterini başında kullanmadık*/}
+                <Route path={"company"} element={<CompanyAbout/>}></Route>
+            </Route>
+        7-Child link render edilmesi için About componenti altına Link tanımlaması ve en sonra da Outlet componenti eklemesi yapılır.
+            <div>
+                <div>About</div>
+                <div>
+                    <hr/>
+                    <Link className={"sub-link"} to={"employee"}>Çalışanlar Hakkında</Link>
+                    <Link className={"sub-link"} to={"company"}>Şirket Hakkında</Link>
+                    <Outlet></Outlet>
+                </div>
+            </div>
+        8- useNavigate hooks kullanımı: yönlendirme işlemi için kullanılır.
+            const navigate = useNavigate();
+            <button onClick={() => navigate("/product-details/" + id)}>Detayına Git</button>
+        9- ProductDetails diye component oluşturulduç
+        10- App.jsx içinde Route eklenir. Bu route path ina /products-details/ ve :id eklenerek gelen id değerine göre render yapılır.                            <Route path={"/products-details:id"} element={<Products/>}></Route>
+
+
+
+    https://www.javaguides.net/2020/09/react-router-step-by-step-tutorial.html
+    https://v5.reactrouter.com/web/guides/quick-start
+
  -------------------
  --------API--------
  -------------------

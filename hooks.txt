@@ -1,0 +1,41 @@
+-----------------------------------------------------------------------------------------------------------------------
+seState()      => Değişken tanımama için kullanılır.
+                        import { useState } from "react";
+                        const [counter, setCounter] = useState(0);
+                                                        string  => useState("")
+                                                        array   => useState([])
+                                                        object  => useState({})
+-----------------------------------------------------------------------------------------------------------------------
+useEffect()     => Bir State durumu değiştiğinde yapılacak işlemler için kullanılır.
+                        import { useEffect } from "react";
+                        useEffect(() => {
+                          //Her zaman render edilir.
+                        });
+
+                        useEffect(() => {
+                          //RSadece ilk açılışta render edilir.
+                        }, []);
+
+                        useEffect(() => {
+                          //İlk açılışta render edilir
+                          //Bir state'in durumu değiştiğinde render ediilr.
+                        }, [prop, state]);
+-----------------------------------------------------------------------------------------------------------------------
+useSelector()   => Redux hooks'u. Store da bulunan state'i almak için kullanılır.
+                        import {useSelector} from "react-redux";
+                        const counter = useSelector(state => state.counter);
+-----------------------------------------------------------------------------------------------------------------------
+useDispatch()   => Redux hooks'u. Store'da bulunan fonksiyonu kullanmak için gereklidir.
+                        import {useDispatch} from "react-redux";
+                        const dispatch = useDispatch();
+                        dispatch(setCounter(e.target.value));
+-----------------------------------------------------------------------------------------------------------------------
+useParams()     => Router Dom hooks'u. Url değerindeki parametreyi almak için kullanılır.
+                        import {useParams} from "react-router-dom";
+                        const {id} = useParams();
+-----------------------------------------------------------------------------------------------------------------------
+useNavigate()   => Router Dom hooks'u. Tıklandığında şu url adresine git demek için kullanılır.
+                        import {useNavigate} from "react-router-dom";
+                        const navigate = useNavigate();
+                        navigate("/product-details/" + id);
+-----------------------------------------------------------------------------------------------------------------------
