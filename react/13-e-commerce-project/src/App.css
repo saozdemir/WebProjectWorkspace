@@ -25,3 +25,21 @@ body {
 #root {
     height: 100vh;
 }
+
+.drawer {
+    width: 500px !important;
+}
+
+.delete-item {
+    width: 50px;
+    margin-left: 5px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff5900;
+    color: white;
+}
+.delete-item:hover {
+    background-color: darkorange;
+    transition: all 0.1s;
+}

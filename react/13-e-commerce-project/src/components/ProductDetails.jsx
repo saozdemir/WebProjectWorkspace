@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {useParams} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {setSelectedProduct} from "../redux/slices/productSlice.jsx";
+import {addToBasket, calculateBasket, removeFromBasket} from "../redux/slices/basketSlice.jsx";
 import "../css/ProductDetails.css";
 import { CiSquarePlus } from "react-icons/ci";
 import { CiSquareMinus } from "react-icons/ci";
@@ -23,6 +24,21 @@ function ProductDetails() {
         if(count>0){
             setCount(count-1);
         }
+    }
+
+    const addBasket = () => {
+        const payload = {//!Yukarıdaki stateler ile yeni verilecek stateler aynı isimli ise tek yazmak yeterli
+            id,
+            price,
+            image,
+            title,
+            description,
+            count
+        }
+
+        dispatch(addToBasket(payload));
+        dispatch(calculateBasket());
+        alert("Ürünler Sepete Eklendi");
     }
 
     const getProductById = () => {
@@ -51,7 +67,7 @@ function ProductDetails() {
                     <CiSquareMinus className={"button-minus"} onClick={() => decrement()} />
                 </div>
                 <div>
-                    <button className={"button-add-card "}>Sepete Ekle</button>
+                    <button className={"button-add-card "} onClick={addBasket}>Sepete Ekle</button>
                 </div>
             </div>
 
