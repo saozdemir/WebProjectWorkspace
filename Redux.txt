@@ -13,6 +13,7 @@ Propslar ile sürekli bir veri taşıma durumu söz konusudur.
     Kurulum:
                 npm install @reduxjs/toolkit
                 npm install react-redux
+                npm install @reduxjs/toolkit react-redux
     Hata alınırsa:
                 npm install @reduxjs/toolkit --force
                 npm install react-redux --force

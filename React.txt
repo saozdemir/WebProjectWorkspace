@@ -67,11 +67,23 @@ src             : Kaynak dosyaları
                 1- Functional component : Halen kullanılıyor.
                 2- Class component : Eskide kaldığı için tercih edilmiyor.
         return: JS kodlarından sonra bir html kodu döndürüyor.
+-------------------------
+----EXPORT yöntemleri----
+-------------------------
+    export          : Bir componentin bir parçasını dışarıya göndermek istediğimizde kullanılır. Import edilirken {} kullanılır.
+                        export const getAllProducts = () => {
+                        };
 
-    EXPORT yöntemleri
-    export          : Bir componentin sadece bir parçasını dışarıya göndermek istediğimizde kullanılır.
+                        import { getAllProducts } from "../redux/slices/productSlice.jsx";
 
-    export default  : bir componenti olduğu gibi dışarıya göndermek istediğinizde kullanılır.
+
+    export default  : Bir componenti olduğu gibi dışarıya göndermek istediğinizde kullanılır.
+                        const appReducer = (state = {}, action) => {
+                        };
+                        export default appReducer;
+
+                        import appReducer from "../redux/slices/appSlice.jsx";
+
 -------------------
 ---PROPS KAVRAMI---
 -------------------
@@ -177,11 +189,23 @@ Fake API için yetenekler ve kurulumlar
             DB Oluşturma: src dizini altına db.json adında dosya oluşturulur.
             Çalıştırma  : json-server --watch .\src\db.json --port 4000
 
+Fake Store API
+    https://fakestoreapi.com/docs
+
+
 Axios API
     GET: sorgulama
     POST: yeni kayıt oluşturma
     PUT: update içlemi için
     DELETE: silme işlemi için
+
+---------------------------------------------------
+--------------------MATERIAL UI--------------------
+---------------------------------------------------
+    Hazır arayüz kütüphanesi
+        Kurulumu: npm install @mui/material @emotion/react @emotion/styled
+
+        https://mui.com/material-ui/getting-started/
 
 ---------------------------------------------
 --------------------UTILS--------------------

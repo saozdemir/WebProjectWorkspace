@@ -18,7 +18,7 @@ useEffect()     => Bir State durumu değiştiğinde yapılacak işlemler için k
 
                         useEffect(() => {
                           //İlk açılışta render edilir
-                          //Bir state'in durumu değiştiğinde render ediilr.
+                          //Bir state'in durumu değiştiğinde render edilir.
                         }, [prop, state]);
 -----------------------------------------------------------------------------------------------------------------------
 useSelector()   => Redux hooks'u. Store da bulunan state'i almak için kullanılır.
@@ -33,6 +33,8 @@ useDispatch()   => Redux hooks'u. Store'da bulunan fonksiyonu kullanmak için ge
 useParams()     => Router Dom hooks'u. Url değerindeki parametreyi almak için kullanılır.
                         import {useParams} from "react-router-dom";
                         const {id} = useParams();
+                        ":" den sonra gelen parametredir.
+                        <Route path={"/product-details/:id"} element={<ProductDetails/>}></Route>
 -----------------------------------------------------------------------------------------------------------------------
 useNavigate()   => Router Dom hooks'u. Tıklandığında şu url adresine git demek için kullanılır.
                         import {useNavigate} from "react-router-dom";
