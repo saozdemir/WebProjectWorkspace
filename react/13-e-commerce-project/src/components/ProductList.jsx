@@ -5,7 +5,7 @@ import Product from "./Product.jsx";
 
 function ProductList() {
     //? const {products} => productSlice.jsx initialState içinde tanımlanan ne ise ona göre object destructing yapıldı. (products: [])
-    const {products}= useSelector((state) => state.product); //! store.jsx de tanımlanan ne ise o yazılmalı(state.product)
+    const {products}= useSelector((state) => state.product);//! store.jsx de tanımlanan ne ise o yazılmalı(state.product)
     const dispatch = useDispatch();
     console.log(products);
 

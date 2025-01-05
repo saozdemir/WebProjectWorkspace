@@ -3,6 +3,7 @@ import axios from "axios";
 
 const initialState = {
     products: [],
+    storedProducts: [],
     selectedProduct: {},
     loading: false,
 }
@@ -21,10 +22,20 @@ export const productSlice = createSlice({
         //* Seçilen ürünün tutulduğu state dir.
         setSelectedProduct: (state, action) => {
             state.selectedProduct = action.payload;
+        },
+
+        searchProducts: (state, action) => {
+            if(action.payload.trim === "") {
+                state.products = [...state.storedProducts];
+            } else {
+                const filteredProducts = state.products && state.products.filter((product)=> product.title.toLocaleLowerCase().includes(action.payload.toLocaleLowerCase()));
+                state.storedProducts = [...state.products];
+                state.products = [...filteredProducts];
+            }
         }
     },
     extraReducers: (builder) => {
-        //* İstek işleniyorsa yabi bekleme modunda ise "loading = true" olarak state güncellendi.
+        //* İstek işleniyorsa yani bekleme modunda ise "loading = true" olarak state güncellendi.
         builder.addCase(getAllProducts.pending, (state, action) => {
             state.loading = true;
         });
@@ -34,9 +45,11 @@ export const productSlice = createSlice({
         builder.addCase(getAllProducts.fulfilled, (state, action) => {
             state.loading = false;
             state.products = action.payload; //! Buradaki "action" => "return response.data;" ile alınan değerdir.
+            state.storedProducts = action.payload;
         });
+
     }
 })
-export const {setSelectedProduct} = productSlice.actions
+export const {setSelectedProduct,searchProducts} = productSlice.actions
 
 export default productSlice.reducer
