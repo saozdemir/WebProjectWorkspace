@@ -1,4 +1,6 @@
-TYPESCRIPT
+--------------------------------------------------------------------------------------------------
+---TYPESCRIPT---
+--------------------------------------------------------------------------------------------------
     - JavaScript üzerine inşa edilmiş syntax standardı olarak tanımlanır.
 
     Kurulum:
@@ -8,7 +10,9 @@ TYPESCRIPT
         npm install
         npm run dev
 
----Temel Tipler---
+--------------------------------------------------------------------------------------------------
+(1)---Temel Tipler---
+--------------------------------------------------------------------------------------------------
     string, number, bolean, undefined, null, object
 
     let firstName:string="Ahmet";
@@ -22,14 +26,17 @@ TYPESCRIPT
         let age:any="33";
         let age:any=33;
 
----Union Types---
+--------------------------------------------------------------------------------------------------
+(2)---Union Types---
+--------------------------------------------------------------------------------------------------
 Bir değişkenin birden farkı tipte tanımlamasına izin verilecekse kullanılır.
     let age => rest servisten string de gelebilir number da gelebilir.
     let age:string|number=22;
     age="33";// Ataması yapılabilir.
 
-
----Literal Types---
+--------------------------------------------------------------------------------------------------
+(3)---Literal Types---
+--------------------------------------------------------------------------------------------------
 Bir değişkene değer setlemeyi zorlamak için kullanılır.
     // statusResult sadece 3 değeri alabilir.
     let statusResult : "pending" | "approwed" | "rejected";
@@ -37,7 +44,9 @@ Bir değişkene değer setlemeyi zorlamak için kullanılır.
     statusResult="pending"; // doğru
     statusResult="new";     // yanlış
 
----Array---
+--------------------------------------------------------------------------------------------------
+(4)---Array---
+--------------------------------------------------------------------------------------------------
 Array türünde nesnelerin tutacakları veri tiplerinin tanımlanmasıdır. 2 Farklı yöntem ile yapılır.
     let names : string[]=["Ahmet", "Emir", "Esra"];
     let names : Array<string>=["Ahmet", "Emir", "Esra"];
@@ -49,7 +58,9 @@ Array türünde nesnelerin tutacakları veri tiplerinin tanımlanmasıdır. 2 Fa
         let mixedArray: (string | number)[] = ["Ahmet", 1];
         let mixedArray: Array<string | number> = ["Ahmet", 1];
 
----Interface ve Type---
+--------------------------------------------------------------------------------------------------
+(5)---Interface ve Type---
+--------------------------------------------------------------------------------------------------
 * Type: Kendi tipimizi oluşturmamızı sağlar.
 
     - Kendimize özel tip Oluşturma
@@ -78,7 +89,9 @@ Interface ler birbirlerini extend ederek kullanılabilir.
 
         let userArray:User[] = [{name:"Emir", age:2}];
 
----Optional Type---
+--------------------------------------------------------------------------------------------------
+(6)---Optional Type---
+--------------------------------------------------------------------------------------------------
 Bir type ya da interface tanımlaması yapıldığında, setlenmesini opsiyonel olarak tutacağımız alanlar varsa ? ile belirtilir.
         interface User {
             name: string,
@@ -96,7 +109,9 @@ Bir type ya da interface tanımlaması yapıldığında, setlenmesini opsiyonel 
             ability: "tennis"
         }
 
----Function--- ÇOK ÖNEMLİ!!!
+--------------------------------------------------------------------------------------------------
+(7)---Function--- ÇOK ÖNEMLİ!!!
+--------------------------------------------------------------------------------------------------
 Alınacak parametreler ve döndürülen değer tipini belirmemize olanak sağlar
             function add (a:number, b:number):number{
                 return a+b;
@@ -129,7 +144,9 @@ Alınacak parametreler ve döndürülen değer tipini belirmemize olanak sağlar
                 }
                 writeArray(array);
 
----Generic---
+--------------------------------------------------------------------------------------------------
+(8)---Generic---
+--------------------------------------------------------------------------------------------------
 Bir fonksiyonun farklı tiplere hizmet etmek için özellştirilmesidir.
     - Fonksiyonların generic yapılması
         function print<T> (array:T[]){
@@ -167,7 +184,9 @@ Bir fonksiyonun farklı tiplere hizmet etmek için özellştirilmesidir.
 
         write(array);
 
----Extend---
+--------------------------------------------------------------------------------------------------
+(9)---Extend---
+--------------------------------------------------------------------------------------------------
 Ortak alanları ortak bir yerde tanımlayarak kod karmaşasından kurtuluruz.
         interface Person {
             id: string,
@@ -199,9 +218,48 @@ Ortak alanları ortak bir yerde tanımlayarak kod karmaşasından kurtuluruz.
             companyNo: string
         }
 
------- DEVAM EDECEK!!!! (25:37)
-Partial, Required, ReadOnly, pick, omit
+--------------------------------------------------------------------------------------------------
+(10)------Partial, Required, ReadOnly, Pick, Omit------
+--------------------------------------------------------------------------------------------------
 
+        interface User {
+            name: string,
+            lastname:string,
+            age:number
+        }
+    - Partial: Tüm alanları opsiyonel yapar.
+        const user1 : Partial<User>={ //Tüm değişkenlerin önine ? koyarak opsiyonel yapar.
+            name:"Ahmet",
+            age:33
+        }
+    - Required: Tüm alanları zorunlu yapar.
+        const user2 : Required<User>={ //Tüm değişkenleri zorunlu yapar.
+            name:"Ahmet",
+            lastname:"ÖZDEMİR",
+            age:33
+        }
+
+    - ReadOnly: Tüm alanları okunabilir yapar değiştirmeye izin vermez.
+        const user3 : Readonly<User>={ //Tüm değişkenleri değiştirmeye kapatır.
+            name:"Ahmet",
+            lastname:"ÖZDEMİR",
+            age:33
+        }
+        user3.name="Emir"; // Bu alanda hata verecektir.
+
+    - Pick: Tanımlanan alanı zorunlu diğerlerini yok kabul eder.
+        const user4 : Pick<User, "name">={ //Tanımlanan değişken hariç hepsini yokmuş gibi davranır.
+            name:"Ahmet",
+            lastname:"ÖZDEMİR", //Bu alanda hata verecektir.
+            age:33, //Bu alanda hata verecektir.
+        }
+
+    -Omit: Pick işleminin tam tersi gibi davranır. Tanımlanan değişkeni yok diğerlerini zorunlu kabul eder.
+        const user5 : Omit<User, "name">={ //Tanımlanan alanı yok, diğerlerini zorunlu kabul eder.
+            name:"Ahmet", // Bu alanda hata verecektir.
+            lastname:"Özdemir",
+            age:33
+        }
 
 
 --------------------------------------------------------------------------------------------
