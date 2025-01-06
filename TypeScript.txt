@@ -1,0 +1,209 @@
+TYPESCRIPT
+    - JavaScript üzerine inşa edilmiş syntax standardı olarak tanımlanır.
+
+    Kurulum:
+        npm create vite@5.4
+            >React
+            >TypeScript seçilir.
+        npm install
+        npm run dev
+
+---Temel Tipler---
+    string, number, bolean, undefined, null, object
+
+    let firstName:string="Ahmet";
+    let age:number=33;
+    let result:boolean=false;
+
+        *let x:undefined = undefined;
+        *let empty:null = null;
+
+        Herhangi tipi alır.
+        let age:any="33";
+        let age:any=33;
+
+---Union Types---
+Bir değişkenin birden farkı tipte tanımlamasına izin verilecekse kullanılır.
+    let age => rest servisten string de gelebilir number da gelebilir.
+    let age:string|number=22;
+    age="33";// Ataması yapılabilir.
+
+
+---Literal Types---
+Bir değişkene değer setlemeyi zorlamak için kullanılır.
+    // statusResult sadece 3 değeri alabilir.
+    let statusResult : "pending" | "approwed" | "rejected";
+
+    statusResult="pending"; // doğru
+    statusResult="new";     // yanlış
+
+---Array---
+Array türünde nesnelerin tutacakları veri tiplerinin tanımlanmasıdır. 2 Farklı yöntem ile yapılır.
+    let names : string[]=["Ahmet", "Emir", "Esra"];
+    let names : Array<string>=["Ahmet", "Emir", "Esra"];
+
+    let numbers: number[] = [1,2,3,4];
+    let names : Array<number> = [1,2,3,4];
+
+    * NOT: Union Type olarak dizi tutumamız gerekiyorsa aşağıdaki gibi kullanılır:
+        let mixedArray: (string | number)[] = ["Ahmet", 1];
+        let mixedArray: Array<string | number> = ["Ahmet", 1];
+
+---Interface ve Type---
+* Type: Kendi tipimizi oluşturmamızı sağlar.
+
+    - Kendimize özel tip Oluşturma
+        type User = {
+            name: string,
+            age: number
+        }
+    - Oluşturulan type kullanımı
+        const user:User = {
+            name: "Ahmet",
+            age: 33
+        }
+    - Dizilere kendi türlerimizi verebiliriz.
+        let userArray:User[] = [{name:"Emir", age:2}];
+* Interface: Type ile aynı şekilde kullanılır. Sadece atama operatörü kullanmadan tip belirlememizi sağlar.
+Interface ler birbirlerini extend ederek kullanılabilir.
+        interface User {
+            name: string,
+            age: number
+        }
+
+        const user:User = {
+            name: "Ahmet",
+            age: 33
+        }
+
+        let userArray:User[] = [{name:"Emir", age:2}];
+
+---Optional Type---
+Bir type ya da interface tanımlaması yapıldığında, setlenmesini opsiyonel olarak tutacağımız alanlar varsa ? ile belirtilir.
+        interface User {
+            name: string,
+            age: number,
+            ability?: string // ability değişkeni opsiyonel olarak tanımlanmış.
+        }
+        // İki farklı şekilde user nesnesi oluşturuldu. ability sadece birinde tanımlandı.
+        const user1:User = {
+            name: "Ahmet",
+            age: 33
+        }
+        const user2:User = {
+            name: "Ahmet",
+            age: 33,
+            ability: "tennis"
+        }
+
+---Function--- ÇOK ÖNEMLİ!!!
+Alınacak parametreler ve döndürülen değer tipini belirmemize olanak sağlar
+            function add (a:number, b:number):number{
+                return a+b;
+            }
+
+        - İki farklı tipten biri dönecekse:
+            function add (a:number, b:number):number|string{
+                        return a+b;
+            }
+
+        - Fonksiyon geriye değer dönmeyecekse :void ile tanımlanır.
+            function print(text:string):void{
+                console.log(text);
+            }
+
+        - Array için aşağıdaki gibi kullanılır.
+
+            function writeArray (array: string[]){
+            }
+
+            function writeArray (array: Array<string>){
+            }
+
+            Örnek:
+                const array:Array<string> = ["Ahmet", "Emir", "Esra"];
+                function writeArray (array: Array<string>){
+                    array && array.forEach((element:string) => { //elemet type'ını da belirledik.
+                        console.log(element);
+                    });
+                }
+                writeArray(array);
+
+---Generic---
+Bir fonksiyonun farklı tiplere hizmet etmek için özellştirilmesidir.
+    - Fonksiyonların generic yapılması
+        function print<T> (array:T[]){
+            console.log(array);
+        }
+
+        print(["Ahmet", "Emir", "Esra"]);
+        print([1,2,3]);
+
+    - Interface'in generic tanımlanması
+        interface GenericType<T> {
+            name:string,
+            age:number,
+            salary: T[]
+        }
+
+        const person1:GenericType<string> = {
+            name:"Ahmet",
+            age:26,
+            salary:["5000"]
+        }
+
+        const person2:GenericType<number> = {
+            name:"Ahmet",
+            age:26,
+            salary:[5000]
+        }
+
+        // İki elemanı tek bir diziye ekledik.
+        let array:GenericType<string|number>[] = [person1, person2]
+
+        function write<T>(array:GenericType<T>[]):void {
+            array.forEach((value:GenericType<T>)=>console.log(value));
+        }
+
+        write(array);
+
+---Extend---
+Ortak alanları ortak bir yerde tanımlayarak kod karmaşasından kurtuluruz.
+        interface Person {
+            id: string,
+            createdDate: string,
+            createdPerson: string,
+            personNo: string
+        }
+
+        interface Company{
+            id: string,
+            createdDate: string,
+            createdPerson: string,
+            companyNo: string
+        }
+
+    - Yukarıdaki ifadeler yerine aşağıdaki gibi kullanılarak daha verimli kod yazılır:
+
+        interface CompanyBase {
+            id: string,
+            createdDate: string,
+            createdPerson: string,
+        }
+
+        interface Person extends CompanyBase{
+            personNo: string
+        }
+
+        interface Company extends CompanyBase{
+            companyNo: string
+        }
+
+------ DEVAM EDECEK!!!! (25:37)
+Partial, Required, ReadOnly, pick, omit
+
+
+
+--------------------------------------------------------------------------------------------
+    Pratik Editör Sitesi
+        https://www.typescriptlang.org/play/
