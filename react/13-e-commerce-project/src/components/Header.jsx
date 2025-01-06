@@ -15,14 +15,14 @@ function Header() {
 
     const {products} = useSelector((store) => store.basket);
 
-    const {filteredProducts} = useSelector((store) => store.product);
+    const {storedProducts} = useSelector((store) => store.product);
 
     const dispatch = useDispatch();
 
-    const changeTheme =()=>{
+    const changeTheme = () => {
         //! Tüm uygulamayı saran "root" componentini aldık.
         const root = document.getElementById("root")
-        if(theme){
+        if (theme) {
             root.style.backgroundColor = "black";
             root.style.color = "white";
         } else {
@@ -32,30 +32,29 @@ function Header() {
         setTheme(!theme);
     }
 
-    const searchProductsByTitle =(title)=>{
-        const searchTitle = title.trim();
-        if(searchTitle.length >= 0 && searchTitle!==""){
-            dispatch(searchProducts(searchTitle));
-        }
-        console.log(filteredProducts);
+    const searchProductsByTitle = (title) => {
+        dispatch(searchProducts(title));
+        console.log(storedProducts);
     }
 
     return (
         <div style={{display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center"}}>
             <div className={"flex-row"}>
-                <img className={"logo"} src={"./src/images/logo.png"} alt="logo" onClick={()=>navigate("/")}/>
+                <img className={"logo"} src={"./src/images/logo.png"} alt="logo" onClick={() => navigate("/")}/>
                 <p className={"logo-text"}>VITE A.Ş.</p>
             </div>
             <div className={"flex-row"}>
-                <input className={"search-input"} type="text" placeholder={"Ara"} onChange={(e)=>searchProductsByTitle(e.target.value)}/>
+                <input className={"search-input"} type="text" placeholder={"Ara"}
+                       onChange={(e) => searchProductsByTitle(e.target.value)}/>
                 <div>
                     {
-                        theme ? <FaMoon className={"icon"} onClick={changeTheme}/> : <CiLight className={"icon"} onClick={changeTheme}/>
+                        theme ? <FaMoon className={"icon"} onClick={changeTheme}/> :
+                            <CiLight className={"icon"} onClick={changeTheme}/>
                     }
 
                     {/*<FaMoon className={"icon"}/>*/}
                     {/* Ürünlerin sepetteki sayısını göstermek için kullanıldı.*/}
-                    <Badge badgeContent={products.length} color={"error"} onClick={()=> dispatch(setDrawer())}>
+                    <Badge badgeContent={products.length} color={"error"} onClick={() => dispatch(setDrawer())}>
                         <CiShoppingBasket className={"icon"}/>
                     </Badge>
 

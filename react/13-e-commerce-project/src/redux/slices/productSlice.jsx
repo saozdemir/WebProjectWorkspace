@@ -25,11 +25,10 @@ export const productSlice = createSlice({
         },
 
         searchProducts: (state, action) => {
-            if(action.payload.trim === "") {
+            if (action.payload.trim === "" || action.payload.trim == null) {
                 state.products = [...state.storedProducts];
             } else {
-                const filteredProducts = state.products && state.products.filter((product)=> product.title.toLocaleLowerCase().includes(action.payload.toLocaleLowerCase()));
-                state.storedProducts = [...state.products];
+                const filteredProducts = state.storedProducts && state.storedProducts.filter((product) => product.title.toLocaleLowerCase().includes(action.payload.toLocaleLowerCase()));
                 state.products = [...filteredProducts];
             }
         }
@@ -50,6 +49,6 @@ export const productSlice = createSlice({
 
     }
 })
-export const {setSelectedProduct,searchProducts} = productSlice.actions
+export const {setSelectedProduct, searchProducts} = productSlice.actions
 
 export default productSlice.reducer
