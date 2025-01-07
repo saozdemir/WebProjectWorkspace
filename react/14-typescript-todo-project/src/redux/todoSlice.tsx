@@ -16,11 +16,23 @@ export const todoSlice = createSlice({
         createTodo: (state: TodoInitialState, action: PayloadAction<TodoType>) => {
             state.todos = [...state.todos, action.payload];//? action.payload => {id, content}
 
+        },
+
+        //* Dışarıdan alınacak id number türünde olacağı için tipi number ayarlandı.
+        removeTodoById: (state: TodoInitialState, action: PayloadAction<number>) => {
+            state.todos = [...state.todos.filter((todo: TodoType) => todo.id !== action.payload)];
+
+        },
+
+        //* todos üzerinde dön ve güncellenen id sıradaki id ile eşit değil ise todosdaki sıradaki eleman kalsın.
+        //* eğer idler eşit ise action.payload ile gelen güncel değer diziye eklensin.
+        updateTodo: (state: TodoInitialState, action: PayloadAction<TodoType>) => {
+            state.todos = [...state.todos.map((todo: TodoType) => todo.id !== action.payload.id ? todo : action.payload)]
         }
     }
 })
 
 // Action creators are generated for each case reducer function
-export const {createTodo} = todoSlice.actions
+export const {createTodo, removeTodoById, updateTodo} = todoSlice.actions
 
 export default todoSlice.reducer
