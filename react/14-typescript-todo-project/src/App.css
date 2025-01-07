@@ -1,4 +1,4 @@
-body{
+body {
     margin: 0px;
     padding: 0px;
     width: 100%;
@@ -49,4 +49,16 @@ body{
 .icons {
     font-size: 22px;
     cursor: pointer;
+}
+
+.delete-icon {
+    color: darkred;
+}
+
+.approve-icon {
+    color: darkgreen;
+}
+
+.update-icon {
+    color: darkgoldenrod;
 }

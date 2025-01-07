@@ -7,9 +7,9 @@ function Todo() {
         <div className={"todo-wrapper"}>
             <div>Ben İlk Todoyum</div>
             <div>
-                <IoMdRemoveCircleOutline className={"icons"}/>
-                <TbEditCircle className={"icons"}/>
-                <IoIosCheckmarkCircleOutline className={"icons"}/>
+                <IoMdRemoveCircleOutline className={"icons delete-icon"}/>
+                <TbEditCircle className={"icons update-icon"}/>
+                <IoIosCheckmarkCircleOutline className={"icons approve-icon"}/>
             </div>
         </div>
     );
