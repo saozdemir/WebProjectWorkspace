@@ -1,4 +1,6 @@
 -----------------------------------------------------------------------------------------------------------------------
+HOOKS
+-----------------------------------------------------------------------------------------------------------------------
 seState()      => Değişken tanımama için kullanılır.
                         import { useState } from "react";
                         const [counter, setCounter] = useState(0);
@@ -41,3 +43,9 @@ useNavigate()   => Router Dom hooks'u. Tıklandığında şu url adresine git de
                         const navigate = useNavigate();
                         navigate("/product-details/" + id);
 -----------------------------------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------------------------------
+CUSTOM HOOKS
+-----------------------------------------------------------------------------------------------------------------------
+    - Bir logic işlemi birden fazla componentte kullanmamız gereken durumlar için kendi hooks'umuzu oluşturabiliriz.
+    - hooks oluştururken use"HooksName" şeklinde standart yapı vardır. Ör: useCounter, useDayCalculator.

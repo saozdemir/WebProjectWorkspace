@@ -166,6 +166,16 @@ src             : Kaynak dosyaları
     https://www.javaguides.net/2020/09/react-router-step-by-step-tutorial.html
     https://v5.reactrouter.com/web/guides/quick-start
 
+ --------------------------
+ --------FORMIK YUP--------
+ --------------------------
+ Form dışındaki statelerden değer almaya ve bu değerlerin form kontrollerinin yapılması için geliştirilmiştir.
+    Formik  : https://formik.org/docs/overview
+                Kurulum: npm install formik --save
+    YUP     : https://www.npmjs.com/package/yup
+                Kurulum: npm install yup
+
+
  -------------------
  --------API--------
  -------------------
@@ -203,9 +213,15 @@ Axios API
 --------------------MATERIAL UI--------------------
 ---------------------------------------------------
     Hazır arayüz kütüphanesi
-        Kurulumu: npm install @mui/material @emotion/react @emotion/styled
+        Kurulumu:   npm install @mui/material @emotion/react @emotion/styled
+                    npm install @mui/icons-material @mui/material @emotion/styled @emotion/react
 
         https://mui.com/material-ui/getting-started/
+        https://mui.com/material-ui/material-icons/
+
+        Benzer Kütüphane: Prime React
+            https://primereact.org/installation/
+
 
 ---------------------------------------------
 --------------------UTILS--------------------

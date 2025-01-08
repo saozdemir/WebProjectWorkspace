@@ -1,0 +1,27 @@
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    min-width: 50px;
+}
+
+.hastane {
+    background-color: yellow;
+}
+
+.izin {
+    background-color: green;
+}
+
+.mazeret {
+    background-color: blue;
+}
+
