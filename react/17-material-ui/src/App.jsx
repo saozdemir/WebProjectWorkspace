@@ -1,11 +1,13 @@
 import './App.css'
-import MUIBUtton from "./components/MUIButton.jsx";
+import MUIButton from "./components/MUIButton.jsx";
+import MUITextField from "./components/MUITextField.jsx";
 
 function App() {
 
     return (
         <div>
-            <MUIBUtton></MUIBUtton>
+
+            <MUITextField></MUITextField>
         </div>
     )
 }
