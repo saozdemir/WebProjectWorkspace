@@ -212,7 +212,11 @@ Axios API
 ---------------------------------------------------
 --------------------MATERIAL UI--------------------
 ---------------------------------------------------
+
     Hazır arayüz kütüphanesi
+    MUI Kütüphanesinde bir komponente sttyle tanımlaması yapılmak istendiğinde style değil "sx" props u kullanılır.
+
+
         Kurulumu:   npm install @mui/material @emotion/react @emotion/styled
                     npm install @mui/icons-material @mui/material @emotion/styled @emotion/react
 
@@ -223,6 +227,8 @@ Axios API
             https://primereact.org/installation/
 
 
+
+
 ---------------------------------------------
 --------------------UTILS--------------------
 ---------------------------------------------
@@ -231,6 +237,62 @@ React Icons
     npm install react-icons
     https://react-icons.github.io/react-icons/
 
+
+---------------------------------------------------
+--------------------DİL DESTEĞİ--------------------
+---------------------------------------------------
+----Kurulum:
+    npm install react-i18next i18next
+
+----JSON:
+    // en/translation.json
+    {
+      "welcome": "Welcome",
+      "description": "This is a sample description"
+    }
+
+    // tr/translation.json
+    {
+      "welcome": "Hoş geldiniz",
+      "description": "Bu bir örnek açıklamadır"
+    }
+
+----JS:
+    import i18n from 'i18next';
+    import { initReactI18next } from 'react-i18next';
+    import enTranslation from './locales/en/translation.json';
+    import trTranslation from './locales/tr/translation.json';
+
+    i18n
+      .use(initReactI18next)
+      .init({
+        resources: {
+          en: { translation: enTranslation },
+          tr: { translation: trTranslation }
+        },
+        lng: 'en', // Varsayılan dil
+        fallbackLng: 'en',
+        interpolation: {
+          escapeValue: false
+        }
+      });
+
+----React:
+    import React from 'react';
+    import { useTranslation } from 'react-i18next';
+
+    const MyComponent = () => {
+      const { t } = useTranslation();
+
+      return (
+        <div>
+          <h1>{t('welcome')}</h1>
+          <p>{t('description')}</p>
+        </div>
+      );
+    };
+
+    export default MyComponent;
 
 ---------------------------------------------
 --------------------SHORTCUT-----------------

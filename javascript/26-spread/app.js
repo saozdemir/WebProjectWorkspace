@@ -1,8 +1,8 @@
-function add(a, b, c, d){
-    console.log(a+b+c+d);
+function add(a, b, c, d) {
+    console.log(a + b + c + d);
 }
 
-add(10,20,30,40);
+add(10, 20, 30, 40);
 
 let numbers = [10, 20, 30, 40];
 
@@ -27,3 +27,15 @@ console.log(a, b, remains);
 const array1 = ["Ahmet", "Emir", "Esra"];
 const array2 = [...array1];//Elemanları birebir kopyalar.
 console.log(array2);
+
+//* Bir nesneyi tüm alanları ile kopyalamak istediğimizde kullanılır
+const user = {
+    name: "Ahmet",
+    surname: "Özdemir"
+}
+
+const copyUser = {...user};
+
+console.log(copyUser);
+console.log(copyUser.name);
+console.log(copyUser.surname);
