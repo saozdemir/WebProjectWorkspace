@@ -9,18 +9,16 @@ function MUIGrid() {
     //! Bootstrapdaki gibi 12 parçaya böler
     return (
         <div>
+            {/* Grid container olarak işaretlenirse bir satır olur ve sonraki gridler responsive özellikleri kullanarak yazılır*/}
             <Grid container spacing={2}>
-                <Grid size={{xs: 6, md: 8}} sx={{border: "1px solid lightgray"}}>
-                    <div>xs=6 md=8</div>
+                <Grid size={{xs: 12, md: 4, lg: 6}} sx={{border: "1px solid lightgray"}}>
+                    <div>xs=12 md=4 lg=6</div>
                 </Grid>
-                <Grid size={{xs: 6, md: 4}} sx={{border: "1px solid lightgray"}}>
-                    <div>xs=6 md=4</div>
+                <Grid size={{xs: 12, md: 4, lg: 3}} sx={{border: "1px solid lightgray"}}>
+                    <div>xs=12 md=4 lg=3</div>
                 </Grid>
-                <Grid size={{xs: 6, md: 4}} sx={{border: "1px solid lightgray"}}>
-                    <div>xs=6 md=4</div>
-                </Grid>
-                <Grid size={{xs: 6, md: 8}} sx={{border: "1px solid lightgray"}}>
-                    <div>xs=6 md=8</div>
+                <Grid size={{xs: 12, md: 4, lg: 3}} sx={{border: "1px solid lightgray"}}>
+                    <div>xs=12 md=4 lg=3</div>
                 </Grid>
             </Grid>
         </div>
