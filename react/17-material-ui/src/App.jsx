@@ -14,6 +14,11 @@ import MUIImageList from "./components/MUIImageList.jsx";
 import MUIDrawer from "./components/MUIDrawer.jsx";
 import MUIBadge from "./components/MUIBadge.jsx";
 import MUIAvatar from "./components/MUIAvatar.jsx";
+import MUITooltip from "./components/MUITooltip.jsx";
+import MUIAlert from "./components/MUIAlert.jsx";
+import MUIDialog from "./components/MUIDialog.jsx";
+import MUISnackbar from "./components/MUISnackbar.jsx";
+import MUIProgress from "./components/MUIProgress.jsx";
 
 function App() {
 
@@ -33,7 +38,12 @@ function App() {
             {/*<MUIImageList></MUIImageList>*/}
             {/*<MUIDrawer></MUIDrawer>*/}
             {/*<MUIBadge></MUIBadge>*/}
-            <MUIAvatar></MUIAvatar>
+            {/*<MUIAvatar></MUIAvatar>*/}
+            {/*<MUITooltip></MUITooltip>*/}
+            {/*<MUIAlert></MUIAlert>*/}
+            {/*<MUIDialog></MUIDialog>*/}
+            {/*<MUISnackbar></MUISnackbar>*/}
+            <MUIProgress></MUIProgress>
         </div>
     )
 }

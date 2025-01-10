@@ -49,7 +49,8 @@ Github Api
 Weather Api
     https://openweathermap.org/api
 
-
+Avatar Api (xx=>sıra numarası)
+    https://randomuser.me/api/portraits/men/xx.jpg
 
 ----------JavaScript Cheat Sheet----------
    https://ilovecoding.org/blog/js-cheatsheet
