@@ -20,6 +20,8 @@ import MUIDialog from "./components/MUIDialog.jsx";
 import MUISnackbar from "./components/MUISnackbar.jsx";
 import MUIProgress from "./components/MUIProgress.jsx";
 import MUISkeleton from "./components/MUISkeleton.jsx";
+import MUITable from "./components/MUITable.jsx";
+import MUITabs from "./components/MUITabs.jsx";
 
 function App() {
 
@@ -45,7 +47,9 @@ function App() {
             {/*<MUIDialog></MUIDialog>*/}
             {/*<MUISnackbar></MUISnackbar>*/}
             {/*<MUIProgress></MUIProgress>*/}
-            <MUISkeleton></MUISkeleton>
+            {/*<MUISkeleton></MUISkeleton>*/}
+            {/*<MUITable></MUITable>*/}
+            <MUITabs></MUITabs>
         </div>
     )
 }
