@@ -226,7 +226,14 @@ Axios API
         Benzer Kütüphane: Prime React
             https://primereact.org/installation/
 
+----------------------------------------------------
+----------------------FIREBASE----------------------
+----------------------------------------------------
+    Google tarafından geliştiilmiş backend ve authentication işlemleri için hizmet sağlayan bir altyapıdır.
+    Backend ve database oluşturmadan bir react uygulaması çalıştırmayı sağlıyor.
 
+    https://console.firebase.google.com/project/fir-example-47545/authentication/users
+    https://firebase.google.com/docs/auth/web/google-signin?hl=tr
 
 
 ---------------------------------------------
@@ -236,6 +243,10 @@ Axios API
 React Icons
     npm install react-icons
     https://react-icons.github.io/react-icons/
+React Toastify
+    npm i react-toastify
+    https://www.npmjs.com/package/react-toastify
+
 
 
 ---------------------------------------------------
