@@ -9,11 +9,13 @@ function Home() {
     const navigate = useNavigate();
     useEffect(() => {
         onAuthStateChanged(auth, (userCredential) => {
-            if (userCredential) {
-                setUser(userCredential.email)
-            } else {
-                toast.warn("Kimlik doğrulaması yapılmadı.")
-                navigate("/auth");
+            if (auth.currentUser != null) {
+                if (userCredential) {
+                    setUser(userCredential.email)
+                } else {
+                    toast.warn("Kimlik doğrulaması yapılmadı.")
+                    navigate("/auth");
+                }
             }
         })
     }, [])

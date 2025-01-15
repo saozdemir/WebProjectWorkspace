@@ -8,9 +8,12 @@ function Navbar() {
     const navigate = useNavigate();
 
     const logout = async () => {
-        await signOut(auth);
-        toast.info("Çıkış yapıldı.")
-        navigate("/auth");
+        if (auth.currentUser != null) {
+            await signOut(auth);
+            toast.info("Çıkış yapıldı.")
+            navigate("/auth");
+        }
+
     }
 
     return (
