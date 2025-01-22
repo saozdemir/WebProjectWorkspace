@@ -1,0 +1,23 @@
+.todo-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid lightgrey;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.todo-input {
+    width: 100%;
+    padding: 10px 0px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid lightgrey;
+}
+
+.todo-icons {
+    font-size: 25px;
+    margin-right: 7px;
+    cursor: pointer;
+}

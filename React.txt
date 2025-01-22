@@ -33,6 +33,10 @@ npm run dev
 
 stop: ctrl + c
 
+---NODE JS---
+set PATH=E:\NodeJS\nodejs-v18.20.6;%PATH%
+
+
 ------------------------Eklentiler------------------------
 Modern React Snippets
     rfce: react functional component
