@@ -5,7 +5,12 @@ import {getAllTodos} from "../redux/todoSlice.jsx"
 import {useDispatch, useSelector} from "react-redux";
 
 function TodoList() {
+    //! Metot çağırmak için kullanılır
     const dispatch = useDispatch();
+
+    //! Store'da tutulan state'i almak için kullanılır. Bu
+    const {todos} = useSelector(store => store.todo);
+    console.log(todos)
 
     useEffect(() => {
         dispatch(getAllTodos())
@@ -14,8 +19,11 @@ function TodoList() {
 
     return (
         <div className={"todo-list"}>
-            <Todo>Todo1</Todo>
-            <Todo>Todo2</Todo>
+            {
+                todos && todos.map((todo) => (
+                    <Todo key={todo.id} todo={todo}></Todo>
+                ))
+            }
         </div>
     )
 }

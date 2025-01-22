@@ -4,6 +4,8 @@ import './App.css'
 import Header from "./componets/Header.jsx";
 import TodoList from "./componets/TodoList.jsx";
 import TodoCreate from "./componets/TodoCreate.jsx";
+import {ToastContainer, toast} from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
     const [count, setCount] = useState(0)
@@ -13,6 +15,7 @@ function App() {
             <Header></Header>
             <TodoCreate></TodoCreate>
             <TodoList></TodoList>
+            <ToastContainer position={"top-right"} autoClose={1200}/>
         </div>
     )
 }

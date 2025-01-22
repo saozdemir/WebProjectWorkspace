@@ -6,8 +6,12 @@ const initialState = {
 }
 
 export const getAllTodos = createAsyncThunk("todos", async ()=>{
-    debugger
     const response = await axios.get("http://localhost:8080/rest/api/todo-app/list");
+    return response.data;
+})
+
+export const addTodo = createAsyncThunk("todos/add", async(newTodo)=>{
+    const response = await axios.post("http://localhost:8080/rest/api/todo-app/add", newTodo);
     console.log(response.data);
     return response.data;
 })
@@ -19,7 +23,11 @@ export const todoSlice = createSlice({
     extraReducers: (builder) => {
         builder.addCase(getAllTodos.fulfilled, (state, action)=>{
             state.todos=action.payload;
-            console.log(todos);
+        })
+
+        builder.addCase(addTodo.fulfilled, (state, action)=>{
+            state.todos.push(action.payload);
+
         })
     }
 })
