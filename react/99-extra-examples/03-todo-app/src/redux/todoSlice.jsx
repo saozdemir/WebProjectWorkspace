@@ -12,6 +12,7 @@ export const getAllTodos = createAsyncThunk("todos", async () => {
 })
 
 export const addTodo = createAsyncThunk("todos/add", async (newTodo) => {
+    debugger
     const response = await axios.post("http://localhost:8080/rest/api/todo-app/add", newTodo);
     return response.data;
 })
@@ -22,6 +23,11 @@ export const deleteTodo = createAsyncThunk("todos/delete", async (deleteId) => {
         return deleteId;
     }
     return null;
+})
+
+export const updateTodo = createAsyncThunk("todos/update", async ({updateId, responseTodo})=>{
+    const response = await axios.put(`http://localhost:8080/rest/api/todo-app/update/${updateId}`, responseTodo);
+    console.log(response.data);
 })
 
 export const todoSlice = createSlice({
@@ -41,6 +47,15 @@ export const todoSlice = createSlice({
         builder.addCase(deleteTodo.fulfilled, (state, action) => {
             if (action.payload != null) {
                 state.todos = state.todos.filter(todo => todo.id !== action.payload);
+            }
+        })
+
+        builder.addCase(updateTodo.fulfilled, (state, action) =>{
+            const updateTodo= action.payload;
+            const index = state.todos.findIndex((todo)=> todo.id === updateTodo.id);
+
+            if (index !== -1) {
+                state.todos[index] = updateTodo;
             }
         })
     }

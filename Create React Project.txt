@@ -66,5 +66,8 @@ set PATH=E:\NodeJS\nodejs-v18.20.6;%PATH%
     npm --version   : 10.9.2
 
     npm create vite@latest komutu bu örnek için çalıştı
+    Sanal sürücü olduğu durumda hata verdi. Fiziksel dizinden npm run dev ile çalıştı
+
+   Evde çalışmadı  npm create vite@3 ile node sürümü farketmeden çalışıyor.
 
 

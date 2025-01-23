@@ -16,11 +16,11 @@ function TodoCreate() {
             toast.warn("Todo alanı boş");
             return;
         }
-        const request = {
+        const requestTodo = {
             id: 0,
             content: newTodo
         };
-        dispatch(addTodo(request));
+        dispatch(addTodo(requestTodo));
         toast.success("Todo eklendi");
         setNewTodo("");
     }
