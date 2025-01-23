@@ -1,0 +1,66 @@
+
+--------------Proje Çalıştırma--------------
+-----ESKİ YÖNTEM-----
+npx create-react-app uygulama_adı
+cd uygulama_adı
+npm start
+
+Hata Çıkarsa
+npm install --save-dev web-vitals
+
+-----YENİ YÖNTEM-----
+Vite ile oluşturma
+https://vite.dev/guide/
+
+C:\Users\xsaozdemir\WebProjectWorkspace\>npm create vite@latest
+- enter project name
+- select React
+- select JavaScript
+
+        Vite sürümü seçmek için=> npm create vite@5.4
+
+cd project name
+npm install
+npm run dev
+
+stop: ctrl + c
+
+---NODE JS---
+set PATH=E:\NodeJS\nodejs-v18.20.6;%PATH%
+
+
+--------------- No Install Node JS ve npm ---------------
+    Kullanılan node.zip sürüm: 22.13.1
+    Zip dosyasının çıkarıldığı yere bir bat dosyası oluştur.
+        (Ör. C:\Users\xsaozdemir\Program Files\NodeJS\node-v22.13.1 dizinine setnodevars.bat)
+    Bat dosyasına aşağıdaki komutları gir.
+                @echo off
+                setlocal enabledelayedexpansion
+                set PATH=%~dp0;%~dp0node_modules\npm;%~dp0node_modules\.bin;%PATH%
+                set NODE_PATH=%~dp0node_modules
+                echo -------------------------------------------------------------
+                echo PATH :
+                rem PATH değişkenini ; ile ayırarak her bir yolu ayrı bir satıra yazdır
+                for %%i in ("%PATH:;=" "%") do (
+                    echo %%i
+                )
+
+                echo -------------------------------------------------------------
+                echo NODE MODULES : %NODE_PATH%
+                echo -------------------------------------------------------------
+
+                endlocal
+                echo NodeJS and npm version set.
+                pause
+
+    Her CMD komut satırında uygulama çalıştırmadan önce bu bat dosyasını çalıştır.
+        3 Adımda Set edilir.
+            1- C:\Users\xsaozdemir\WebProjectWorkspace\react>go_node.bat
+            2- C:\Users\xsaozdemir\Program Files\NodeJS\node-v22.13.1>setnodevars.bat
+            3- C:\Users\xsaozdemir\Program Files\NodeJS\node-v22.13.1>go_react.bat
+
+    =>=>=> NOT::::: setnodevars.bat
+
+    npm create vite@latest komutu bu örnek için çalıştı
+
+---------------Son Denenen Yöntem------------------------

@@ -6,37 +6,6 @@
 ReactJS (JSX) => JS + HTML
 
 
-
---------------Proje Çalıştırma--------------
------ESKİ YÖNTEM-----
-npx create-react-app uygulama_adı
-cd uygulama_adı
-npm start
-
-Hata Çıkarsa
-npm install --save-dev web-vitals
-
------YENİ YÖNTEM-----
-Vite ile oluşturma
-https://vite.dev/guide/
-
-C:\Users\xsaozdemir\WebProjectWorkspace\>npm create vite@latest
-- enter project name
-- select React
-- select JavaScript
-
-        Vite sürümü seçmek için=> npm create vite@5.4
-
-cd project name
-npm install
-npm run dev
-
-stop: ctrl + c
-
----NODE JS---
-set PATH=E:\NodeJS\nodejs-v18.20.6;%PATH%
-
-
 ------------------------Eklentiler------------------------
 Modern React Snippets
     rfce: react functional component

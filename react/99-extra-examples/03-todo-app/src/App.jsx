@@ -8,15 +8,16 @@ import {ToastContainer, toast} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function App() {
-    const [count, setCount] = useState(0)
 
     return (
-        <div className="App">
+        <di>
             <Header></Header>
-            <TodoCreate></TodoCreate>
-            <TodoList></TodoList>
+            <div className="app">
+                <TodoCreate></TodoCreate>
+                <TodoList></TodoList>
+            </div>
             <ToastContainer position={"top-right"} autoClose={1200}/>
-        </div>
+        </di>
     )
 }
 
