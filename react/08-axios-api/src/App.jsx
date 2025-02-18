@@ -71,12 +71,12 @@ function App() {
 
     //! Uygulama ilk yüklendiğinde aşağıdaki metotları çağır. (Sadece sayfa ilk yüklendiğinde çalışır.)
     useEffect(() => {
-        // getAllUsers(); // GET
+        getAllUsers(); // GET
         // getUserById(2); // GET
-        // createUser(newUser) // POST
+        createUser(newUser) // POST
         // updateUser("1", updatedUser); // PUT
         //deleteUserById("1"); // DELETE
-        getPost();
+        // getPost();
     }, []);
 
     return (
