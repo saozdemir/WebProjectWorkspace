@@ -1,0 +1,22 @@
+{
+  "name": "01-begin",
+  "version": "1.0.0",
+  "description": "First project",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "default test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "WebProjectWorkspace"
+  },
+  "keywords": [
+    "electron"
+  ],
+  "author": "saozdemir",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^34.2.0"
+  }
+}

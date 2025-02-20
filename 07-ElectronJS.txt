@@ -1,0 +1,15 @@
+-----------------------------------------------------------------------------------------------------------------------
+    ELECTRON JS
+-----------------------------------------------------------------------------------------------------------------------
+    HTML, CSS ve JavaScript ile tüm işletim sistemlerinde masaüstü uygulamaları destekler.
+    NodeJS ve Chromium kullanır.
+
+    Proje Oluşturma
+        npm init =>  başlanır.
+        entry point: (index.js) "main.js" olarak değiştirilir.
+        package.json oluştu
+        npm install --save electron
+        package.json'sa scripts altına     "start": "electron .", eklendi
+
+    Çalıştırma
+        npm start
