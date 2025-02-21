@@ -4,6 +4,7 @@
     HTML, CSS ve JavaScript ile tüm işletim sistemlerinde masaüstü uygulamaları destekler.
     NodeJS ve Chromium kullanır.
 
+1- Yöntem
     Proje Oluşturma
         npm init =>  başlanır.
         entry point: (index.js) "main.js" olarak değiştirilir.
@@ -13,3 +14,21 @@
 
     Çalıştırma
         npm start
+
+2- Yöntem (React)
+    npx create-react-app uygulama_adi
+
+
+    Kaynak: https://medium.com/@azer.maslow/creating-desktop-applications-with-electron-and-react-b7f81f78c9d5
+
+
+ 3- Electron-vite
+    https://electron-vite.org/
+    https://www.youtube.com/watch?v=niTEOwD1pzs
+
+    Proje Oluşturma
+        npm create @quick-start/electron@latest
+        cd <prject_dir>
+        npm i
+    Çalıştırma
+        npm run dev
