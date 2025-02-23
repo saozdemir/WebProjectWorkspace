@@ -32,3 +32,7 @@
         npm i
     Çalıştırma
         npm run dev
+
+
+WebProjectWorkspace\electronjs\01-begin\99-extra-examples\02-frontend-app>
+WebProjectWorkspace\react\99-extra-examples\04-frontend-app>
