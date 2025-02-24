@@ -1,8 +1,9 @@
-import { app, shell, BrowserWindow, ipcMain } from 'electron'
-import { join } from 'path'
-import { electronApp, optimizer, is } from '@electron-toolkit/utils'
+import {app, shell, BrowserWindow, ipcMain} from 'electron'
+import {join} from 'path'
+import {electronApp, optimizer, is} from '@electron-toolkit/utils'
 import icon from '../../resources/icon.png?asset'
-const { spawn } = require('child_process');
+
+const {spawn} = require('child_process');
 const http = require('http');
 const path = require('path');
 
@@ -15,7 +16,7 @@ function createWindow() {
     height: 670,
     show: false,
     autoHideMenuBar: true,
-    ...(process.platform === 'linux' ? { icon } : {}),
+    ...(process.platform === 'linux' ? {icon} : {}),
     webPreferences: {
       preload: join(__dirname, '../preload/index.js'),
       sandbox: false
@@ -28,7 +29,7 @@ function createWindow() {
 
   mainWindow.webContents.setWindowOpenHandler((details) => {
     shell.openExternal(details.url)
-    return { action: 'deny' }
+    return {action: 'deny'}
   })
 
   // HMR for renderer base on electron-vite cli.
@@ -47,8 +48,8 @@ function startBackend() {
     // const __dirname = path.dirname(new URL(import.meta.url).pathname);
     // const jarPath = path.join(__dirname, '../../backend/backend-api-0.0.1-SNAPSHOT.jar');
     /** Java ve Jar dosyasının Path adresini alınca backend process olarak çalıştı.*/
-    const jarPath = 'D:\\home\\WebProjectWorkspace\\electronjs\\01-begin\\99-extra-examples\\02-frontend-app\\src\\backend\\backend-api-0.0.1-SNAPSHOT.jar';
-    const javaPath = 'C:\\Program Files\\Java\\jdk-17.0.8\\bin\\java.exe';
+    const jarPath = 'C:\\Users\\xsaozdemir\\WebProjectWorkspace\\electronjs\\01-begin\\99-extra-examples\\02-frontend-app\\src\\backend\\backend-api-0.0.1-SNAPSHOT.jar';
+    const javaPath = 'C:\\Users\\xsaozdemir\\Java\\jdk-17.0.8\\bin\\java.exe';
 // Spawn komutunu güncelledik
     backendProcess = spawn(javaPath, ['-jar', jarPath], {
       cwd: path.dirname(jarPath) // JAR'ın bulunduğu dizini çalışma dizini olarak ayarladık
