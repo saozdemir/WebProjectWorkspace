@@ -1,1 +1,29 @@
-{}
+{
+  "personnelList": [
+    {
+      "id": "1",
+      "name": "Ahmet",
+      "surname": "Özdemir"
+    },
+    {
+      "id": "9e62",
+      "name": "Emir",
+      "surname": "Özdemir"
+    },
+    {
+      "id": "cbee",
+      "name": "Esra",
+      "surname": "Özdemir"
+    },
+    {
+      "id": "22df",
+      "name": "Emir",
+      "surname": "özdemir"
+    },
+    {
+      "id": "44a3",
+      "name": "Emir",
+      "surname": "özdemir"
+    }
+  ]
+}

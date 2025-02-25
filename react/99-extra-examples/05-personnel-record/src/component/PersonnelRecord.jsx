@@ -1,7 +1,7 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import {Button, TextField} from "@mui/material";
 import {useDispatch} from "react-redux";
-import {savePersonnel} from "../redux/personnelSlice.jsx";
+import {addNewPersonnel, getAllPersonnel, savePersonnel} from "../redux/personnelSlice.jsx";
 
 function PersonnelRecord() {
     const [personnel, setPersonnel] = useState({name: "", surname: ""});
@@ -12,13 +12,19 @@ function PersonnelRecord() {
             name: personnel.name, surname: personnel.surname
         }
         console.log(newPersonnel)
-        dispatch(savePersonnel(newPersonnel))
+        dispatch(addNewPersonnel(newPersonnel));
+        //dispatch(savePersonnel(newPersonnel))
         //useDispatch(savePersonnel())
     }
 
     const search = () => {
-
+        dispatch(ge)
+        dispatch(getAllPersonnel());
     }
+
+    useEffect(() => {
+        dispatch(getAllPersonnel());
+    }, []);
 
     return (<div className={"personnel-record"}>
         <div className={"personnel-record-row"}>
@@ -35,7 +41,7 @@ function PersonnelRecord() {
             <Button variant="contained" color="primary" onClick={save}>Kaydet</Button>
         </div>
         <div className={"personnel-record-row"}>
-            <Button variant="contained" color="secondary">Ara</Button>
+            <Button variant="contained" color="secondary" onClick={search}>Ara</Button>
         </div>
 
     </div>)
