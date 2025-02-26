@@ -21,6 +21,7 @@ npm Libraries
     Internationalization    : npm install react-i18next i18next
     UUID                    : npm install uuid
     Redux                   : npm install @reduxjs/toolkit react-redux
+    Recoil                  : npm install recoil
     Moment                  : npm install moment
     Moment Timezone         : npm install moment-timezone
     Date FNS                : npm install date-fns
