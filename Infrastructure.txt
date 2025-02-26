@@ -1,0 +1,35 @@
+Node JS Version
+    node    : v22.14.0
+    npm     : 10.9.2
+
+npm Libraries
+    Router DOM              : npm install react-router-dom
+    Formik                  : npm install formik
+    React Hook Form         : npm install react-hook-form
+    Axios                   : npm install axios
+    JSON Server             : npm install json-server
+    Express                 : npm install express
+    Vite                    : npm install vite
+    Electron                : npm install electron-vite
+    Material UI             : npm install @mui/icons-material @mui/material @emotion/styled @emotion/react
+    Prime React             : npm install primereact
+    React Bootstrap         : npm install react-bootstrap bootstrap
+    Ant Design              : npm install antd
+    Semantic UI React       : npm install semantic-ui-react
+    React Icons             : npm install react-icons
+    React Toastify          : npm install react-toastify
+    Internationalization    : npm install react-i18next i18next
+    UUID                    : npm install uuid
+    Redux                   : npm install @reduxjs/toolkit react-redux
+    Moment                  : npm install moment
+    Moment Timezone         : npm install moment-timezone
+    Date FNS                : npm install date-fns
+    Luxon                   : npm install luxon
+    React Scripts           : npm install react-scripts
+    Lodash                  : npm install lodash
+    Debug                   : npm install debug
+    TypeScript              : npm install typescript
+    Socket.io               : npm install socket.io
+Apache Maven Version
+    3.9.9
+
