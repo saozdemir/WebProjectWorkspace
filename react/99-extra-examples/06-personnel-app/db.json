@@ -1,0 +1,14 @@
+{
+  "personnel": [
+    {
+      "id": "1",
+      "firstName": "John",
+      "lastName": "Doe"
+    },
+    {
+      "id": "98a7",
+      "firstName": "ahmet",
+      "lastName": "özdemir"
+    }
+  ]
+}
