@@ -14,6 +14,8 @@ npm Libraries
     Material UI             : npm install @mui/icons-material @mui/material @emotion/styled @emotion/react
     Prime React             : npm install primereact
     React Bootstrap         : npm install react-bootstrap bootstrap
+    React Modal             : npm install npm install react-modal
+    React Draggable         : npm install npm install react-draggable
     Ant Design              : npm install antd
     Semantic UI React       : npm install semantic-ui-react
     React Icons             : npm install react-icons
