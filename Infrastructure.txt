@@ -36,3 +36,47 @@ npm Libraries
 Apache Maven Version
     3.9.9
 
+HTML
+<!--
+@author saozdemir
+@project ${PROJECT_NAME}
+@date ${DAY} ${MONTH_NAME_SHORT} ${YEAR}
+@description:
+-->
+
+CSS
+/*
+ * @author saozdemir
+ * @project ${PROJECT_NAME}
+ * @date ${DAY} ${MONTH_NAME_SHORT} ${YEAR}
+ * @description:
+ */
+
+ JS
+ /**
+  * @author saozdemir
+  * @project ${PROJECT_NAME}
+  * @date ${DAY} ${MONTH_NAME_SHORT} ${YEAR}
+  * <p>
+  * @description:
+  */
+
+Java
+ /**
+  * @author saozdemir
+  * @project ${PROJECT_NAME}
+  * @date ${DAY} ${MONTH_NAME_SHORT} ${YEAR}
+  * <p>
+  * @description:
+  */
+
+  Python
+ """
+  @author saozdemir
+  @project ${PROJECT_NAME} ${NAME}
+  @date ${DAY} ${MONTH_NAME_SHORT} ${YEAR}
+  <p>
+  @description:
+ """
+
+
