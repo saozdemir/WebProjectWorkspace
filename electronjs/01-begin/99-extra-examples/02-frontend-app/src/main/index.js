@@ -48,8 +48,8 @@ function startBackend() {
     // const __dirname = path.dirname(new URL(import.meta.url).pathname);
     // const jarPath = path.join(__dirname, '../../backend/backend-api-0.0.1-SNAPSHOT.jar');
     /** Java ve Jar dosyasının Path adresini alınca backend process olarak çalıştı.*/
-    const jarPath = 'C:\\Users\\xsaozdemir\\WebProjectWorkspace\\electronjs\\01-begin\\99-extra-examples\\02-frontend-app\\src\\backend\\backend-api-0.0.1-SNAPSHOT.jar';
-    const javaPath = 'C:\\Users\\xsaozdemir\\Java\\jdk-17.0.8\\bin\\java.exe';
+    const jarPath = 'C:\\Users\\hvl\\home\\WebProjectWorkspace\\electronjs\\01-begin\\99-extra-examples\\02-frontend-app\\src\\backend\\backend-api-0.0.1-SNAPSHOT.jar';
+    const javaPath = 'C:\\Program Files\\Java\\jdk-17\\bin\\java.exe';
 // Spawn komutunu güncelledik
     backendProcess = spawn(javaPath, ['-jar', jarPath], {
       cwd: path.dirname(jarPath) // JAR'ın bulunduğu dizini çalışma dizini olarak ayarladık
