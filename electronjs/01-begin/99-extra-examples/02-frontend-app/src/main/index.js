@@ -91,7 +91,7 @@ function startBackend() {
           if (responseData.trim() === "This is a backend message") {
             resolve();
           } else {
-            setTimeout(checkBackend, 1000);
+            setTimeout(checkBackend, 1000)
           }
         });
       }).on('error', (err) => {
