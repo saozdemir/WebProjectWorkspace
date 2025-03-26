@@ -288,3 +288,32 @@ Console Yazdırma:   clg (VSCode)
 
 React Fonksiyon Oluşturma:  rfce (VSCode)
                             rsf (Ws)
+
+---------------------------------------------
+---------------------DEBUG-------------------
+---------------------------------------------
+1- WebStorm menüsünden Run > Edit Configurations... seçeneğine tıklayın.
+2- Sol üstteki + (Add New Configuration) butonuna tıklayın ve JavaScript Debug'ı seçin.
+3- Konfigürasyon Ayarlarını Yapın
+    Name: İstediğiniz bir isim verin (örneğin, Vite React Debug).
+    URL : http://localhost:5173 (Vite'in varsayılan portu 5173'tür).
+4- Önce npm run dev komutunu çalıştırın.
+5- Breakpoint eklemek için kodunuzda duraklamak istediğiniz satıra tıklayın.
+6- Ardından Debug Configurations'dan oluşturduğunuz konfigürasyonu seçin ve Debug butonuna tıklayın.
+
+NOT:
+    1- vite.config.js dosyasında aşağıdaki ayarın aktif olduğundan emin olun:
+            // vite.config.js
+            export default defineConfig({
+              build: {
+                sourcemap: true, // Varsayılan olarak "false" değilse ekleyin
+              },
+            });
+
+    2- Eğer özel bir port kullanıyorsanız (örneğin, 5173 yerine 3000), debug konfigürasyonundaki URL ve Port ayarlarını güncelleyin:
+            // vite.config.js
+            export default defineConfig({
+              server: {
+                port: 3000, // Özel port
+              },
+            });
