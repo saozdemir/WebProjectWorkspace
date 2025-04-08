@@ -20,7 +20,9 @@ function WordTable() {
     }, [wordList]);
 
     useEffect(() => {
-        console.log(selectedWord)
+        if (selectedWord !== null) {
+            console.log("Selected Word: ", selectedWord.word);
+        }
 
     }, [selectedWord]);
 

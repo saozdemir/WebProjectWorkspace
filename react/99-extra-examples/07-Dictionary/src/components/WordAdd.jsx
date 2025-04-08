@@ -21,6 +21,7 @@ function WordAdd() {
     const toast = useRef(null);
 
     const addNewWord = () => {
+
         if (enterWord.trim() !== "") {
             console.log(enterWord);
             setEnterWord("");
@@ -39,7 +40,7 @@ function WordAdd() {
             setEnterWord("");
             console.log("Word Found :", foundWord);
         } else {
-            toast.current.show({severity:'warn', summary: 'Uyarı', detail:'Bir kelime giriniz.', life: 1000});
+            toast.current.show({severity:'warn', summary: 'Uyarı', detail:'Bir kelime giriniz.', life: 2000});
         }
     }
 
