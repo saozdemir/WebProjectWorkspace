@@ -11,6 +11,10 @@ function App() {
     setMessage(response.data);
   }
 
+  const click=()=>{
+    console.log("clicked");
+  }
+
   useEffect(() => {
     return () => {
       setMessage(getMessages);
@@ -22,6 +26,7 @@ function App() {
   return (
     <div>
       {"*" + message}
+      <button onClick={click}>Click</button>
     </div>
   )
 }
