@@ -9,7 +9,7 @@ import React, {useEffect, useRef, useState} from 'react'
 import {Button} from 'primereact/button';
 import {InputText} from 'primereact/inputtext';
 import { Toast } from 'primereact/toast';
-import {addWordFromDictionary, findWordFromDictionary} from "../redux/wordSlice.jsx";
+import {addWordFromDictionary, findWordFromDictionary,removeWordFromDictionary} from "../redux/wordSlice.jsx";
 import {useDispatch, useSelector} from "react-redux";
 
 
@@ -18,6 +18,7 @@ function WordAdd() {
     const dispatch = useDispatch();
     const index = useSelector(state => state.word.word.length);
     const foundWord = useSelector(state => state.word.searchedWord);
+    const selectedWord = useSelector(state => state.word.selectedWord);
     const toast = useRef(null);
 
     const addNewWord = () => {
@@ -44,6 +45,14 @@ function WordAdd() {
         }
     }
 
+    const deleteWord = () => {
+        if(selectedWord != null || selectedWord.length > 0) {
+            console.log("Selected Word: ", selectedWord);
+            dispatch(removeWordFromDictionary(selectedWord));
+            toast.current.show({severity:'success', summary: 'Başarılı', detail:'Kelime Silindi.', life: 1000});
+        }
+    }
+
     //!  Redux state güncellemeleri asenkron olduğu için, dispatch işlemi tamamlanmadan önce foundWord state'ini kontrol ediyorsunuz. Bu nedenle foundWord boş geliyor.
     useEffect(() => {
         if (foundWord.length > 0) {
@@ -61,7 +70,11 @@ function WordAdd() {
             }}/>
             <Button label="Kelime Ekle" severity="success" style={{margin: "5px"}} onClick={addNewWord}/>
             <Button label="Kelime Ara" severity="info" style={{margin: "5px"}} onClick={findWord}/>
+            <Button label="Kelime Sil" severity="danger" style={{margin: "5px"}} onClick={deleteWord}/>
+            <div>{foundWord.length > 0 ? foundWord[0].word : "-"}</div>
         </div>
+
+
     )
 }
 

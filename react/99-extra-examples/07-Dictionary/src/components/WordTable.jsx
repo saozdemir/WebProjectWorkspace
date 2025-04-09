@@ -8,11 +8,13 @@
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import React, {useEffect, useState} from 'react'
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
+import {selectWordFromDictionary} from "../redux/wordSlice.jsx";
 
 function WordTable() {
     const wordList = useSelector(state => state.word.word);
-    const [selectedWord, setSelectedWord] = useState(null);
+    const dispatch = useDispatch();
+    const [selectedWordLocal, setSelectedWordLocal] = useState(null);
 
 
     useEffect(() => {
@@ -20,15 +22,17 @@ function WordTable() {
     }, [wordList]);
 
     useEffect(() => {
-        if (selectedWord !== null) {
-            console.log("Selected Word: ", selectedWord.word);
+        if (selectedWordLocal !== null) {
+            dispatch(selectWordFromDictionary(selectedWordLocal))
+            console.log("Selected Word: ", selectedWordLocal.word);
+
         }
 
-    }, [selectedWord]);
+    }, [selectedWordLocal]);
 
     return (
         <div className="card">
-            <DataTable value={wordList} selectionMode="single" dataKey="id" selection={selectedWord} onSelectionChange={(e) => setSelectedWord(e.value)}>
+            <DataTable value={wordList} selectionMode="single" dataKey="id" selection={selectedWordLocal} onSelectionChange={(e) => setSelectedWordLocal(e.value)}>
                 <Column field="id" header="#" style={{width:"10px"}}></Column>
                 <Column field="word" header="Word" ></Column>
             </DataTable>
