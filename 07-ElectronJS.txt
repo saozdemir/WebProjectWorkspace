@@ -21,7 +21,7 @@
 
     Kaynak: https://medium.com/@azer.maslow/creating-desktop-applications-with-electron-and-react-b7f81f78c9d5
 
-
+**Geçerli Yöntem**
  3- Electron-vite
     https://electron-vite.org/
     https://www.youtube.com/watch?v=niTEOwD1pzs
@@ -32,6 +32,10 @@
         npm i
     Çalıştırma
         npm run dev
+
+    Exe oluşturma
+        npm run build:win
+        package.json'da scripts altına tanımlı!!
 
 
 WebProjectWorkspace\electronjs\01-begin\99-extra-examples\02-frontend-app>
