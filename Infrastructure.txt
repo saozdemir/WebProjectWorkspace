@@ -33,6 +33,7 @@ npm Libraries
     Debug                   : npm install debug
     TypeScript              : npm install typescript
     Socket.io               : npm install socket.io
+    Sentry                 : npm install @sentry/react @sentry/tracing
 Apache Maven Version
     3.9.9
 
