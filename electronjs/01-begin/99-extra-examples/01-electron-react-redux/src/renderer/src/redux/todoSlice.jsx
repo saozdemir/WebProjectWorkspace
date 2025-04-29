@@ -27,19 +27,27 @@ export const deleteTodo = createAsyncThunk("todos/delete", async (deleteId) => {
 export const updateTodo = createAsyncThunk("todos/update", async ({updateId, responseTodo}) => {
   const response = await axios.put(`http://localhost:8080/rest/api/todo-app/update/${updateId}`, responseTodo);
   console.log(response.data);
+  return response.data;
 })
 
 export const todoSlice = createSlice({
   name: "todo",
   initialState,
-  reducers: {},
+  reducers: {
+    updateTodos: (state, action) => {
+      state.todos = action.payload;
+    },
+  },
   extraReducers: (builder) => {
     builder.addCase(getAllTodos.fulfilled, (state, action) => {
       state.todos = action.payload;
     })
 
     builder.addCase(addTodo.fulfilled, (state, action) => {
-      state.todos.push(action.payload);
+      const isDuplicate = state.todos.some(todo => todo.id === action.payload.id);
+      if (!isDuplicate) {
+        state.todos.push(action.payload);
+      }
 
     })
 
@@ -50,16 +58,20 @@ export const todoSlice = createSlice({
     })
 
     builder.addCase(updateTodo.fulfilled, (state, action) => {
-      const updateTodo = action.payload;
-      const index = state.todos.findIndex((todo) => todo.id === updateTodo.id);
+      if (!action.payload) return;
 
-      if (index !== -1) {
-        state.todos[index] = updateTodo;
-      }
+      state.todos = state.todos.map(todo =>
+        todo.id === action.payload.id ? action.payload : todo
+      );
+    })
+
+    builder.addCase(updateTodo.rejected, (state, action) => {
+      toast.error("Güncelleme başarısız oldu");
+      console.error("Update failed:", action.error);
     })
   }
 })
 
-export const {} = todoSlice.actions
+export const {updateTodos} = todoSlice.actions
 
 export default todoSlice.reducer
