@@ -1,0 +1,109 @@
+@import './base.css';
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  padding-top: 50px;
+}
+
+.header{
+  width: 100%;
+  height: 70px;
+  background-color: #ffc400;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h4 {
+  color: white;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.todo-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid lightgrey;
+  padding: 5px;
+  margin-top: 5px;
+  width: 70%;
+  height: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+
+.todo-input {
+  width: 55vh;
+  padding: 10px 0px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid lightgrey;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+
+.todo-icons {
+  font-size: 25px;
+  margin-right: 7px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.todo-remove {
+  color: #b30000;
+  padding: 5px;
+}
+
+.todo-remove:hover {
+  color: #e00f0f;
+}
+
+.todo-update {
+  color: #004d80;
+  padding: 5px;
+}
+
+.todo-update:hover {
+  color: #008ae6;
+}
+
+.todo-save {
+  color: #006600;
+  padding: 5px;
+}
+
+.todo-save:hover {
+  color: #00cc00;
+}
+
+.create-todo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  margin-top: 50px;
+  border: 1px solid lightgray;
+  margin: 50px 10px;
+}

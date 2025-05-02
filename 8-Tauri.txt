@@ -1,0 +1,41 @@
+-----------------------------------------------------------------------------------------------------------------------
+    TAURI
+-----------------------------------------------------------------------------------------------------------------------
+    Tauri: Tauri, tüm büyük masaüstü ve mobil platformlar için küçük, hızlı binary dosyalar oluşturmak için bir frameworktür.
+    Geliştiriciler, gerektiğinde backend mantığı için Rust, Swift ve Kotlin gibi dillerden yararlanırken kullanıcı deneyimlerini oluşturmak için
+    HTML, JavaScript ve CSS'ye derlenen herhangi bir frontend çerçevesini entegre edebilirler.
+
+
+Gereksinimler :
+    - Node.js
+    - Rust
+    - Tauri CLI (npm install -g @tauri-apps/cli)
+    - Android Studio (Android için)
+    - Xcode (iOS için)
+    - Visual Studio (Windows için)
+    - Yalnızca Linux üzerinde çalışıyorsanız, Linux üzerinde çalışmak için gerekli olan tüm bağımlılıkları yükleyin.
+
+    Windows'ta ise PATH'e C:\Users\<kullanıcı_adı>\.cargo\bin eklenmelidir.
+
+    cargo --version
+    rustc --version
+
+Kurulum:
+Proje Oluşturma:
+    npm create tauri-app@latest
+
+      cd [app_name]
+      npm install
+      npm run tauri dev
+      npm run tauri dev -- --no-clean
+
+      Mobil uygulama geliştirmek için:
+      npm run tauri android init
+
+
+
+
+      Mobil uygulama çalıştırmak için:
+      For Android development, run:
+        npm run tauri android dev
+
