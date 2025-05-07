@@ -1,0 +1,10 @@
+ 1- Material UI      : npm install @mui/material @emotion/react @emotion/styled
+ 2- TypeScript       : npm install @types/react @types/react-dom
+ 3- Redux Toolkit    : npm install @reduxjs/toolkit react-redux
+ 4- React Icons      : npm install react-icons
+ 5- JSON Server      : npm install json-server
+ 6- Axios            : npm install axios
+ 7- Formik           : npm install formik
+ 8- Yup              : npm install yup
+ 9- React Router Dom : npm install react-router-dom
+10- React Toastify   : npm install react-toastify
