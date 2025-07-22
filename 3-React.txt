@@ -198,6 +198,10 @@ Axios API
 
         Benzer Kütüphane: Prime React
             https://primereact.org/installation/
+            npm install primereact primeicons primeflex
+
+            Tema:
+            https://unpkg.com/primereact@10.9.6/resources/themes/fluent-light/theme.css
 
 ----------------------------------------------------
 ----------------------FIREBASE----------------------

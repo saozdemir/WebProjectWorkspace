@@ -10,6 +10,7 @@ function App() {
     <div>
         <div>Sentry IO Example</div>
         <button onClick={() => {throw new Error("This is sentry React Error!");}}>Error Message!</button>
+        <button onClick={() => {throw new AxiosError("This is sentry React Error!");}}>Axios Error Message!</button>
     </div>
   )
 }
