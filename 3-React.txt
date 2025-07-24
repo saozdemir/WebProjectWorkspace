@@ -321,3 +321,12 @@ NOT:
                 port: 3000, // Özel port
               },
             });
+
+---------------------------------------------
+----------------Faydalı Linkler--------------
+---------------------------------------------
+        Mustafa Filiz: React Router Dom ve Authentication & Registration işlemleri (JWT Token)
+                https://www.youtube.com/watch?v=-JWDRxez3QA&list=PLdYLIhwDacdF_tqL7TTrhepd0h8mr2nPr
+
+        Dave Gray:
+                https://youtu.be/brcHK3P6ChQ?si=LLxOAbMPXr0Ih2gx

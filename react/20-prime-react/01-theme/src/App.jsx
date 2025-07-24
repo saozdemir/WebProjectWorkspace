@@ -3,6 +3,8 @@ import './App.css'
 import {Calendar} from "primereact/calendar";
 import ThemeSelect from "./ThemeSelect.jsx";
 import {THEMES} from "./themes.jsx";
+import {Password} from 'primereact/password';
+import {PrimeIcons} from "primereact/api";
 
 function changeTheme(theme) {
     const themeLink = document.getElementById('theme-link');
@@ -24,6 +26,14 @@ function App() {
             <div>
                 <ThemeSelect theme={theme} setTheme={setTheme} />
                 <Calendar value={date} onChange={(e) => setDate(e.value)} showIcon />
+                <div className={"p-inputgroup flex-1"}>
+                                <span className="p-inputgroup-addon">
+                                    <i className="pi pi-lock"></i>
+                                </span>
+                    <Password value={value}
+                              onChange={(e) => setValue(e.target.value)} toggleMask feedback={true}
+                              inputStyle={{ width: "100%" }} placeholder={"Şifre"}/>
+                </div>
             </div>
         </>
     )

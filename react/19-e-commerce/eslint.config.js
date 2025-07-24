@@ -25,6 +25,9 @@ export default tseslint.config(
       ],
         "no-unused-vars": "off",
         "react/prop-types": "off",
+        "@typescript-eslint/no-unused-vars": "off",
+        "react/react-in-jsx-scope": "off",
+
     },
   },
 )

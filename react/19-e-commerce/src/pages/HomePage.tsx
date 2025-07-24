@@ -5,7 +5,6 @@
  * <p>
  * @description:
  */
-import React from 'react'
 
 function HomePage() {
     return (

@@ -6,6 +6,7 @@
  * @description:
  */
 import React from 'react'
+import {useState} from 'react'
 import '../css/RegisterPage.css'
 import TextField from '@mui/material/TextField';
 import InputAdornment from '@mui/material/InputAdornment';
@@ -15,11 +16,16 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
-import { useFormik } from 'formik';
-import { registerPageSchema } from '../schemas/RegisterPageSchema.tsx';
+import {useFormik} from 'formik';
+import {registerPageSchema} from '../schemas/RegisterPageSchema.tsx';
+import registerPageService from "../services/RegisterPageService.tsx";
+import type {UserType} from "../types/Types.tsx";
+import {toast} from "react-toastify";
+import {useNavigate} from "react-router-dom";
 
 function RegisterPage() {
-    const [showPassword, setShowPassword] = React.useState(false);
+    const navigate = useNavigate();
+    const [showPassword, setShowPassword] = useState(false);
 
     const handleClickShowPassword = () => setShowPassword((show) => !show);
 
@@ -31,22 +37,42 @@ function RegisterPage() {
         event.preventDefault();
     };
 
+    const submit = async (values:any, actions: any)=>{
+        try {
+            console.log(values);
+            console.log(actions);
+            const payload: UserType = {...values}
+            console.log(payload);
+           const response = await registerPageService.register(payload);
+           if(response){
+               clear();
+               toast.success("Kayıt başarılı!");
+               navigate("/login");
+           }
+        } catch (e) {
+            toast.error("Kayıt başarısız! Lütfen tekrar deneyin.");
+        }
+
+    }
+
     const {values, handleSubmit, handleChange, errors, resetForm} = useFormik({
         initialValues: {
             username: '',
             password: ''
         },
-        onSubmit: values => {
-            alert(JSON.stringify(values, null, 2));
-        },
-        validationSchema:registerPageSchema
+        onSubmit: submit,
+        validationSchema: registerPageSchema
     });
+
+    const clear = () => {
+        resetForm();
+    }
     console.log(errors)
 
     return (
         <div className={"register"}>
             <div className={"main"}>
-                <form>
+                <form onSubmit={handleSubmit}>
                     <div className={"form-div"}>
                         <TextField
                             id="username"
@@ -65,7 +91,7 @@ function RegisterPage() {
                                 },
                             }}
                             variant="standard"
-                            helperText={errors.username && <span style={{color: "red"}}>{errors.username}</span> }
+                            helperText={errors.username && <span style={{color: "red"}}>{errors.username}</span>}
                         />
                         <TextField
                             id="password"
@@ -75,12 +101,12 @@ function RegisterPage() {
                             type={showPassword ? 'text' : 'password'}
                             className={"text-field"}
                             variant="standard"
-                            helperText={errors.password && <span style={{color: "red"}}>{errors.password}</span> }
+                            helperText={errors.password && <span style={{color: "red"}}>{errors.password}</span>}
                             slotProps={{
                                 input: {
                                     startAdornment: (
                                         <InputAdornment position="start">
-                                            <Lock />
+                                            <Lock/>
                                         </InputAdornment>
                                     ),
                                     endAdornment: (
@@ -91,7 +117,7 @@ function RegisterPage() {
                                                 onMouseDown={handleMouseDownPassword}
                                                 onMouseUp={handleMouseUpPassword}
                                             >
-                                                {showPassword ? <VisibilityOff /> : <Visibility />}
+                                                {showPassword ? <VisibilityOff/> : <Visibility/>}
                                             </IconButton>
                                         </InputAdornment>
                                     ),
@@ -99,8 +125,10 @@ function RegisterPage() {
                             }}
                         />
                         <div className={"div-button"}>
-                            <Button size={"small"} sx={{textTransform: "none", marginRight: "10px"}} variant={"contained"} color={"info"}>Kaydol</Button>
-                            <Button size={"small"} sx={{textTransform: "none", backgroundColor: "#CDA735"}} variant={"contained"}>Temizle</Button>
+                            <Button type={"submit"} size={"small"} sx={{textTransform: "none", marginRight: "10px"}}
+                                    variant={"contained"} color={"info"}>Kaydol</Button>
+                            <Button onClick={clear} size={"small"} sx={{textTransform: "none", backgroundColor: "#efa32c"}}
+                                    variant={"contained"}>Temizle</Button>
                         </div>
                     </div>
 
