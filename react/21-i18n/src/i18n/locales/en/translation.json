@@ -1,0 +1,8 @@
+{
+  "login": "Login",
+  "username": "Username",
+  "password": "Password",
+  "welcome": "Welcome {{name}}!",
+  "switch.to.dark": "Switch to Dark Mode",
+  "switch.to.light": "Switch to Light Mode"
+}

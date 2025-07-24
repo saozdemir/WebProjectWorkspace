@@ -1,0 +1,8 @@
+{
+  "login": "Giriş Yap",
+  "username": "Kullanıcı Adı",
+  "password": "Şifre",
+  "welcome": "Hoş geldin {{name}}!",
+  "switch.to.dark": "Gece Moduna Geç",
+  "switch.to.light": "Gündüz Moduna Geç"
+}

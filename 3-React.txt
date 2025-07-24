@@ -232,6 +232,11 @@ React Toastify
 ----Kurulum:
     npm install react-i18next i18next
 
+    Yeni:
+    npm install i18next react-i18next i18next-browser-languagedetector
+    npm install @types/i18next --save-dev
+
+
 ----JSON:
     // en/translation.json
     {
