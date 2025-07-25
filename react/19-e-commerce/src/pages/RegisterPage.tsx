@@ -41,7 +41,13 @@ function RegisterPage() {
         try {
             console.log(values);
             console.log(actions);
-            const payload: UserType = {...values}
+            // const payload: UserType = {...values}
+            const payload: UserType = {
+                id: String(Math.floor(Math.random() * 99999)),
+                username: values.username,
+                password: values.password,
+                balance: 1000
+            }
             console.log(payload);
            const response = await registerPageService.register(payload);
            if(response){
@@ -74,6 +80,7 @@ function RegisterPage() {
             <div className={"main"}>
                 <form onSubmit={handleSubmit}>
                     <div className={"form-div"}>
+                        <h3>Kaydol</h3>
                         <TextField
                             id="username"
                             placeholder="Kullanıcı Adı"

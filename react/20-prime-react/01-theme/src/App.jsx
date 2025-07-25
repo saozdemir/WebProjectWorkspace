@@ -5,6 +5,7 @@ import ThemeSelect from "./ThemeSelect.jsx";
 import {THEMES} from "./themes.jsx";
 import {Password} from 'primereact/password';
 import {PrimeIcons} from "primereact/api";
+import '@primereact/themes/bootstrap4-light-blue/theme.css'
 
 function changeTheme(theme) {
     const themeLink = document.getElementById('theme-link');

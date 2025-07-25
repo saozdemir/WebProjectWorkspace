@@ -1,19 +1,22 @@
 {
   "users": [
     {
-      "username": "admin",
-      "password": "1",
-      "id": "c766"
-    },
-    {
       "id": "bdd1",
       "username": "saozdemir",
-      "password": "1"
+      "password": "1",
+      "balance": 1000
     },
     {
-      "id": "b667",
-      "username": "sss",
-      "password": "sss"
+      "id": "e839",
+      "username": "keozdemir",
+      "password": "1",
+      "balance": 1000
+    },
+    {
+      "id": "32396",
+      "username": "saozdemir",
+      "password": "1",
+      "balance": 1000
     }
   ]
 }
