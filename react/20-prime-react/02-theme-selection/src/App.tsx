@@ -16,7 +16,7 @@ function App() {
 
 
   return (
-      <PrimeReactProvider value={{ ripple: true, unstyled: false, pt: {}, dark: isDark }}>
+      <PrimeReactProvider value={{ ripple: true, unstyled: false, pt: {}}}>
         {/* Bu bileşen görünmez ama tema değişimini yönetir */}
         <ThemeManager />
 

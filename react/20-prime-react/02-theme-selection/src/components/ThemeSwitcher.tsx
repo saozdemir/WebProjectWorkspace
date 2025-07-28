@@ -32,6 +32,12 @@ function ThemeSwitcher() {
         {name: 'Bootstrap - Koyu', code: 'bootstrap4-dark-blue' },
         {name: 'Viva - Açık', code: 'viva-light'},
         {name: 'Viva - Koyu', code: 'viva-dark'},
+        {name: 'Soho - Açık', code: 'soho-light' },
+        {name: 'Soho - Koyu', code: 'soho-dark' },
+        {name: 'MDC - Açık', code: 'mdc-light-indigo' },
+        {name: 'MDC - Koyu', code: 'mdc-dark-indigo' },
+        {name: 'MD - Açık', code: 'md-light-indigo' },
+        {name: 'MD - Koyu', code: 'md-dark-indigo' },
     ];
 
     const handleThemeChange = (e: { value: string }) => {
