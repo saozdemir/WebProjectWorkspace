@@ -1,0 +1,13 @@
+.logo {
+    width: 200px;
+    height: 200px;
+    padding: 1.5em;
+    will-change: filter;
+    transition: filter 300ms;
+}
+
+.logo:hover {
+    border-radius: 35%;
+    filter: drop-shadow(0 0 30px rgba(41, 35, 92, 0.8));
+}
+/*#29235c*/
