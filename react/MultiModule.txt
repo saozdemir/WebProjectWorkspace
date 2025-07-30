@@ -1,0 +1,32 @@
+frontend/
+├── public/
+├── src/
+│   ├── app/                   # Uygulama ayarları, root layout, store
+│   │   ├── store.ts           # Redux store
+│   │   ├── routes.tsx         # Tüm modüllerin route birleşimi
+│   │   └── App.tsx
+│   │
+│   ├── modules/               # Her frontend modülü burada
+│   │   ├── user-management/
+│   │   │   ├── components/
+│   │   │   ├── pages/
+│   │   │   ├── hooks/
+│   │   │   ├── context/        # Context API kullanımı için
+│   │   │   ├── store/          #slice tanımlamaları
+│   │   │   ├── types/
+│   │   │   ├── api/
+│   │   │   └── index.ts       # Route + slice birleşimi export
+│   │   │
+│   │   ├── integration-management/
+│   │   └── inventory-tracking/
+│   │
+│   ├── shared/                # Ortak bileşenler (Button, Modal), tema, i18n
+│   │   ├── components/
+│   │   ├── hooks/
+│   │   ├── constants/
+│   │   └── types/
+│   │
+│   └── main.tsx
+├── .env
+├── tsconfig.json
+└── package.json

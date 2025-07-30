@@ -336,6 +336,11 @@ NOT:
         Dave Gray:
                 https://youtu.be/brcHK3P6ChQ?si=LLxOAbMPXr0Ih2gx
 
-        Cosden Solutions
-            JWT : https://www.youtube.com/watch?v=AcYF18oGn6Y
-            i18n: https://www.youtube.com/watch?v=U4_P_l3L_EA
+        Cosden Solutions:
+            JWT Security            : https://www.youtube.com/watch?v=AcYF18oGn6Y
+            i18n Multilanguage      : https://www.youtube.com/watch?v=U4_P_l3L_EA
+            Role Based Authorization: https://www.youtube.com/watch?v=-IqMxPU3vbU
+            Error Handling          : https://www.youtube.com/watch?v=OQQAv8t3bfc
+            DnD Drag and Drop       : https://www.youtube.com/watch?v=DVqVQwg_6_4
+            Clean Code              : https://www.youtube.com/watch?v=UWC1XlNJSvc
+            Design Patterns         : https://www.youtube.com/watch?v=MdvzlDIdQ0o
