@@ -1,0 +1,4 @@
+
+Access Token => In memory(state)
+
+Refresh Token => HttpOnly Cookie

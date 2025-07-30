@@ -4,12 +4,24 @@
  * @date 07 May 2025
  * @description:
  */
-.product-list{
+.home-page-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.product-list {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+.category {
+    margin: 40px 10px;
+    margin-left: 20px;
 }
 
 .card {

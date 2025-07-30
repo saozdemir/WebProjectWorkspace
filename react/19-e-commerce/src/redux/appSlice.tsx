@@ -24,7 +24,7 @@ const appSlice = createSlice({
     name: 'app',
     initialState,
     reducers: {
-        setLoading:(state:AppSliceType, action:PayloadAction<boolean>)=>{
+        setLoading: (state: AppSliceType, action: PayloadAction<boolean>) => {
             state.loading = action.payload;
         },
         setCurrentUser: (state: AppSliceType, action: PayloadAction<UserType | null>) => {
@@ -40,16 +40,32 @@ const appSlice = createSlice({
             }
         },
         removeCurrentUser: (state: AppSliceType) => {
-          if(state.currentUser){
-            state.currentUser = null;
-            localStorage.removeItem("currentUser");
-          }
+            if (state.currentUser) {
+                state.currentUser = null;
+                localStorage.removeItem("currentUser");
+            }
         },
         setProducts: (state: AppSliceType, action: PayloadAction<ProductType[]>) => {
             state.products = action.payload;
         },
-    }
+        filterProducts: (state: AppSliceType, action: PayloadAction<string>) => {
+            const tempProducts: ProductType[] = [];
+            state.products.map((product: ProductType) => {
+                if (product.title.toLowerCase().includes(action.payload.toLowerCase())) {
+                    tempProducts.push(product);
+                }
+            })
+            state.products = [...tempProducts];
+        },
+    },
 });
 
-export const { setLoading ,setCurrentUser, loadCurrentUser, removeCurrentUser, setProducts} = appSlice.actions;
+export const {
+    setLoading,
+    setCurrentUser,
+    loadCurrentUser,
+    removeCurrentUser,
+    setProducts,
+    filterProducts
+} = appSlice.actions;
 export default appSlice.reducer;

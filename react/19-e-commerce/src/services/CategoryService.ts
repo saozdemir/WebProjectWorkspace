@@ -1,32 +1,30 @@
+import axios, {type AxiosResponse} from "axios";
+import type { ProductType } from "../types/Types";
+
 /**
  * @author saozdemir
  * @project WebProjectWorkspace
- * @date 25 Jul 2025
+ * @date 30 Jul 2025
  * <p>
  * @description:
  */
-import axios, {type AxiosResponse} from "axios";
-import type {ProductType} from "../types/Types.tsx";
-
-class ProductService {
-
+class CategoryService{
     BASE_URL = "https://fakestoreapi.com";
 
-    getAllProducts(): Promise<ProductType[]> {
+    getAllCategories(): Promise<string[]> {
         return new Promise((resolve: any, reject: any) => {
-            axios.get(`${this.BASE_URL}/products`)
+            axios.get(`${this.BASE_URL}/products/categories`)
                 .then((response: AxiosResponse<any, any>) => resolve(response.data))
                 .catch((error:any) => reject(error));
         });
     }
 
-    getProductById(id: number): Promise<ProductType> {
-        return new Promise((resolve: any, reject: any) => {
-            axios.get(`${this.BASE_URL}/products/${id}`)
+    getProductsByCategory(category:string): Promise<ProductType[]>{
+        return new Promise((resolve:any, reject:any)=>{
+            axios.get(`${this.BASE_URL}/products/category/${category}`)
                 .then((response: AxiosResponse<any, any>) => resolve(response.data))
                 .catch((error:any) => reject(error));
         });
     }
 }
-
-export default new ProductService();
+export default new CategoryService();

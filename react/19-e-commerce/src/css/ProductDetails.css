@@ -1,0 +1,13 @@
+/*
+ * @author saozdemir
+ * @project WebProjectWorkspace
+ * @date 30 Jul 2025
+ * @description:
+ */
+
+.product-details-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+}

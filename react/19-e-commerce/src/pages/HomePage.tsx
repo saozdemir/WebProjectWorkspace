@@ -14,7 +14,8 @@ import {toast} from "react-toastify";
 import type {ProductType} from "../types/Types.tsx";
 import ProductCard from "../components/ProductCard.tsx";
 import '../css/HomePage.css'
-import NavBar from "../components/NavBar.tsx";
+import Category from "../components/Category.tsx";
+import Container from '@mui/material/Container';
 
 function HomePage() {
     const dispatch = useDispatch();
@@ -41,11 +42,16 @@ function HomePage() {
 
     return (
         <div>
-            <NavBar/>
-            <div className={"product-list"}>
-                {
-                    products && products.map((product: ProductType, index: number) => (<ProductCard key={index} product={product}></ProductCard>))
-                }
+            <div className={"home-page-wrapper"}>
+                <Category />
+                <Container maxWidth={"xl"}>
+                    <div className={"product-list"}>
+                        {
+                            products && products.map((product: ProductType, index: number) => (
+                                <ProductCard key={index} product={product}></ProductCard>))
+                        }
+                    </div>
+                </Container>
             </div>
         </div>
 
