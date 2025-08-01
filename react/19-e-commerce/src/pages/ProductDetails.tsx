@@ -12,6 +12,7 @@ import IconButton from '@mui/material/IconButton';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import Chip from '@mui/material/Chip';
+import {addProductToBasket} from "../redux/basketSlice.ts";
 
 /**
  * @author saozdemir
@@ -36,6 +37,18 @@ function ProductDetails() {
             toast.error("An error occurred while fetching product details.");
         } finally {
             dispatch(setLoading(false));
+        }
+    }
+
+    const addBasket =()=>{
+        if(product){
+            const payload:ProductType = {
+                ...product,
+                count: count
+            }
+            dispatch(addProductToBasket(payload))
+            console.log(payload)
+
         }
     }
 
@@ -66,7 +79,7 @@ function ProductDetails() {
                                 </IconButton>
                             </div>
                             <div>
-                                <Button color={"info"} variant={"contained"} size={"small"} sx={{textTransform: "none", marginTop:"20px"}}>Sepete Ekle</Button>
+                                <Button onClick={addBasket} color={"info"} variant={"contained"} size={"small"} sx={{textTransform: "none", marginTop:"20px"}}>Sepete Ekle</Button>
                             </div>
                         </div>
 

@@ -34,6 +34,7 @@ npm Libraries
     TypeScript              : npm install typescript
     Socket.io               : npm install socket.io
     Sentry                  : npm install @sentry/react @sentry/tracing
+    Concurrency             : npm install -g concurrently
 Apache Maven Version
     3.9.9
 

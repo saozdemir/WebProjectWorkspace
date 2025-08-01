@@ -15,21 +15,23 @@ import logo from '../images/logo.png';
 import {useNavigate} from "react-router-dom";
 import Button from "@mui/material/Button";
 import InputAdornment from "@mui/material/InputAdornment";
-import {filterProducts, removeCurrentUser, setLoading, setProducts} from "../redux/appSlice.tsx";
+import {filterProducts, removeCurrentUser, setDrawer, setLoading, setProducts} from "../redux/appSlice.tsx";
 import TextField from "@mui/material/TextField";
 import SearchIcon from '@mui/icons-material/Search';
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {toast} from "react-toastify";
 import type {ChangeEvent} from "react";
 import type { ProductType } from '../types/Types.tsx';
 import productService from "../services/ProductService.ts";
 import {FaShoppingBasket} from "react-icons/fa";
 import Badge from '@mui/material/Badge';
+import type {RootState} from "../redux/store.tsx";
 
 
 function NavBar() {
     const navigate = useNavigate();
     const dispatch = useDispatch();
+    const {basket} = useSelector((state:RootState)=> state.basket);
 
     const logout = () => {
         dispatch(removeCurrentUser());
@@ -50,6 +52,10 @@ function NavBar() {
             toast.error("An error occurred while filtering products.");
         }
 
+    }
+
+    const openDrawer = () => {
+        dispatch(setDrawer(true));
     }
 
 
@@ -89,7 +95,7 @@ function NavBar() {
                         }}
                         variant="standard"
                     />
-                    <Badge badgeContent={4} color={"warning"} sx={{ margin: "0px 10px", cursor: "pointer"}}>
+                    <Badge onClick={openDrawer} badgeContent={basket.length} color={"warning"} sx={{ margin: "0px 10px", cursor: "pointer"}}>
                         <FaShoppingBasket style={{fontSize: "20px"}}/>
                     </Badge>
 

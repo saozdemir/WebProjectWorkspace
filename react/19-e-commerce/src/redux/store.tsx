@@ -7,10 +7,12 @@
  */
 import { configureStore } from '@reduxjs/toolkit'
 import appReducer from "./appSlice.tsx";
+import basketReducer from "./basketSlice.ts";
 
 export const store = configureStore({
     reducer: {
-        app: appReducer
+        app: appReducer,
+        basket: basketReducer,
     },
 })
 

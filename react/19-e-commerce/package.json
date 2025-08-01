@@ -4,11 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "concurrently \"json-server --watch ./src/jsonserver/db.json --port 5000\" \"vite\"",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "json-server": "json-server --watch ./src/jsonserver/db.json --port 5000"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -36,6 +35,7 @@
     "@types/react": "^19.1.9",
     "@types/react-dom": "^19.1.7",
     "@vitejs/plugin-react": "^4.4.1",
+    "concurrently": "^9.2.0",
     "eslint": "^9.25.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.19",
