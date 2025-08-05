@@ -1,5 +1,5 @@
 {
-  "name": "09-user-management",
+  "name": "10-authentication",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "install": "npm install axios react-router-dom mitt"
   },
   "dependencies": {
     "axios": "^1.11.0",

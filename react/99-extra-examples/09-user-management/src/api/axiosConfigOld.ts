@@ -7,8 +7,7 @@
  */
 
 import axios from 'axios';
-import eventBus from './eventBus';
-import {EventTypes} from "./eventTypes.ts";
+import eventBus from './eventBus'; // doğru import
 
 const api = axios.create({
     baseURL: 'http://localhost:8080',
@@ -32,7 +31,7 @@ api.interceptors.request.use(
             config.headers['Authorization'] = `Bearer ${accessToken}`;
         }
         if (csrfToken && config.method !== 'get') {
-            config.headers['X-XSRF-TOKEN'] = csrfToken;
+            config.headers['X-CSRF-TOKEN'] = csrfToken;
         }
         return config;
     },
@@ -55,12 +54,13 @@ api.interceptors.response.use(
                 setInitialCsrfToken(newCsrf);
 
                 originalRequest.headers['Authorization'] = `Bearer ${payload.accessToken}`;
-                originalRequest.headers['X-XSRF-TOKEN'] = newCsrf;
+                originalRequest.headers['X-CSRF-TOKEN'] = newCsrf;
 
                 return api(originalRequest);
             } catch (refreshError) {
+                // Refresh token süresi de dolmuş, oturumu sonlandır
                 console.warn("Refresh token da geçersiz. Kullanıcı çıkış yapmalı.");
-                eventBus.emit(EventTypes.FORCE_LOGOUT);
+                eventBus.dispatch("force-logout"); // ✅ Doğru kullanım burada
             }
         }
 
