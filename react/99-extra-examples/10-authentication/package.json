@@ -8,10 +8,12 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "install": "npm install axios react-router-dom mitt"
+    "install": "npm install axios react-router-dom mitt jwt-decode http-status-codes"
   },
   "dependencies": {
     "axios": "^1.11.0",
+    "http-status-codes": "^2.3.0",
+    "jwt-decode": "^4.0.0",
     "mitt": "^3.0.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",

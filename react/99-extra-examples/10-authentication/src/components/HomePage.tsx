@@ -26,7 +26,7 @@ function HomePage() {
     };
 
     const handleUpdateData = async () => {
-        try {999
+        try {
             const response = await api.post('/api/user-management/user/test-user-authentication', { firstName: 'Yeni Ad', lastName:"Yeni Soyad" }); // Örnek bir POST isteği
             console.log(response.data.payload)
             alert("POST başarılı! Interceptor'lar yeni CSRF token'ını arka planda güncelledi.");
