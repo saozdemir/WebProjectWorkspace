@@ -4,7 +4,8 @@ import ThemeSwitcher from './components/ThemeSwitcher';
 import { Card } from 'primereact/card';
 import { Button } from 'primereact/button';
 import { PrimeReactProvider } from 'primereact/api';
-import mysLogo from './assets/images/mys-logo.svg'
+// import mysLogo from './assets/images/mys-logo.svg'
+import mysLogo from './assets/images/mys-logo 11.png'
 
 import './App.css'
 import CalendarUtil from "./components/CalendarUtil.tsx";

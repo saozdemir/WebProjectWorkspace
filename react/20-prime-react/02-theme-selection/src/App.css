@@ -1,13 +1,25 @@
+/*.logo {*/
+/*    width: 200px;*/
+/*    height: 200px;*/
+/*    padding: 1.5em;*/
+/*    will-change: filter;*/
+/*    transition: filter 300ms;*/
+/*}*/
+
+/*.logo:hover {*/
+/*    border-radius: 35%;*/
+/*    filter: drop-shadow(0 0 30px rgba(72, 55, 179, 0.8));*/
+/*}*/
+/*#29235c*/
+
 .logo {
-    width: 200px;
-    height: 200px;
-    padding: 1.5em;
-    will-change: filter;
-    transition: filter 300ms;
+    width: 150px;
+    height: auto;
+    transition: transform 0.6s ease, filter 0.6s ease;
 }
 
 .logo:hover {
-    border-radius: 35%;
+    transform: scale(1.05);
     filter: drop-shadow(0 0 30px rgba(72, 55, 179, 0.8));
+    cursor: pointer;
 }
-/*#29235c*/
